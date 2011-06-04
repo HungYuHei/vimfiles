@@ -4,6 +4,7 @@ syntax enable       " 语法高亮
 filetype plugin on  " 文件类型插件
 filetype indent on  " 为特定文件类型载入相关缩进文件
 autocmd BufEnter * :syntax sync fromstart
+let mapleader=","
 
 set nocompatible    " 关闭兼容模式
 set autoindent      " 打开自动缩,继承前一行的缩进方式，特别适用于多行注释
