@@ -55,6 +55,11 @@ map <C-V> "+gP
 cmap <C-V> <C-R>+
 imap <C-V> <C-R>+
 
+" 窗口区域切换,Ctrl+jkhl 来切换
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 " 窗口区域切换,Ctrl+↑↓←→  来切换
 imap <silent> <C-left> <esc><C-W><left>
 vmap <silent> <C-left> <esc><C-W><left>
