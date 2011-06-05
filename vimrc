@@ -1,8 +1,5 @@
-" ^z快速进入shell
-nmap <C-Z> :shell<cr>
 syntax enable       " 语法高亮
-filetype plugin on  " 文件类型插件
-filetype indent on  " 为特定文件类型载入相关缩进文件
+filetype plugin indent on  " 文件类型检测
 autocmd BufEnter * :syntax sync fromstart
 let mapleader=","
 
@@ -43,6 +40,8 @@ inoremap <leader>4 {<esc>o}<esc>:let leavechar="}"<cr>O
 inoremap <leader>q ''<esc>:let leavechar="'"<cr>i
 inoremap <leader>w ""<esc>:let leavechar='"'<cr>i
 
+" ^z快速进入shell
+nmap <C-Z> :shell<cr>
 " 把空格键映射成:
 nmap <space> :
 " 把 F8 映射到 启动NERDTree插件  
@@ -76,3 +75,10 @@ nmap <silent> <C-down> <C-W><down>
 
 colorscheme blackboard  " 使用blackboard插件的配色
 :filetype plugin on     " 启动snipMate插件
+
+" taglist插件配置
+let Tlist_Show_One_File=1    " 不同时显示多个文件的tag，只显示当前文件的
+let Tlist_Exit_OnlyWindow=1  " 如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Use_Right_Window=1 " 在右侧窗口中显示taglist窗口
+" F9打开taglist
+nnoremap <silent> <F9> :TlistToggle<CR>
