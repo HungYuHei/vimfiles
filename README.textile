@@ -1,25 +1,25 @@
-h1.HungYuHei's vimrc
+h1. HungYuHei's vimrc
 
-h2.Installtion
+h2. Installtion
 
 1. Check out from github
 
-pre.
+pre. 
 git clone git@github.com:HungYuHei/vimfiles.git ~/.vim
 
 2. Install ~/.vimrc
 
-pre.
+pre. 
 ln -s ~/.vim/vimrc ~/.vimrc
 
 3. Install ctags
 
 Ubuntu:
 
-pre.
+pre. 
 $ sudo apt-get install ctags
 
 Fedora:
 
-pre.
+pre. 
 $ sudo yum install ctags
