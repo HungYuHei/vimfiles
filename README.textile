@@ -2,24 +2,38 @@ h1. HungYuHei's vimrc
 
 h2. Installtion
 
-1. Check out from github
+h3. 1. Check out from github
 
 pre. 
 git clone git@github.com:HungYuHei/vimfiles.git ~/.vim
 
-2. Install ~/.vimrc
+h3. 2. Install ~/.vimrc
 
 pre. 
 ln -s ~/.vim/vimrc ~/.vimrc
 
-3. Install ctags
+h3. 3. Install ctags
 
-Ubuntu:
+Ubuntu :
 
 pre. 
 $ sudo apt-get install ctags
 
-Fedora:
+Fedora :
 
 pre. 
 $ sudo yum install ctags
+
+h2. Plugins
+
+* "The NERD tree":http://www.vim.org/scripts/script.php?script_id=1658 : A tree explorer plugin for navigating the filesystem
+* "vim-surround":http://www.vim.org/scripts/script.php?script_id=1697 : Plugin for deleting, changing, and adding "surroundings"
+* "BufExplorer":http://www.vim.org/scripts/script.php?script_id=42 : Quickly and easily switch between buffers
+* "Blackboard":http://www.vim.org/scripts/script.php?script_id=2280 : Clone of the Blackboard theme from textmate
+* "snipMate":http://www.vim.org/scripts/script.php?script_id=2540 : TextMate-style snippets for Vim
+* "TagList":http://www.vim.org/scripts/script.php?script_id=273 : Provide an overview of the structure of source code files
+* "git-vim":https://github.com/motemen/git-vim : Call git functions from inside Vim
+
+h2. Screenshot
+
+!http://pic.yupoo.com/hungyuhei/BiN1JhzI/medish.jpg!
