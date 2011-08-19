@@ -1,0 +1,10 @@
+have_header: checking for ruby.h... -------------------- yes
+
+"gcc -E -I. -I/home/hungyuhei/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -g -O2  -fPIC    conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include <ruby.h>
+/* end */
+
+--------------------
+
