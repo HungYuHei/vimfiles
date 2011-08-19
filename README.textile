@@ -33,6 +33,7 @@ h2. Plugins
 * "snipMate":http://www.vim.org/scripts/script.php?script_id=2540 : TextMate-style snippets for Vim
 * "TagList":http://www.vim.org/scripts/script.php?script_id=273 : Provide an overview of the structure of source code files
 * "git-vim":https://github.com/motemen/git-vim : Call git functions from inside Vim
+* "Command-T":https://wincent.com/products/command-t : provide an extremely fast, intuitive mechanism for opening files with a minimal number of keystrokes
 
 h2. Screenshot
 
