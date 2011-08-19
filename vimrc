@@ -25,6 +25,7 @@ set guioptions-=R   " 隐藏右边滚动条
 set formatoptions+=mM   " 正确地处理中文字符的折行和拼接
 set whichwrap+=<,>,h,l  " 退格键和方向键可以换行
 set fileencodings=utf-8 " 文件UTF-8编码
+set pastetoggle=<F2>    " 切换粘贴模式
 
 " 设置缩进 
 set expandtab
@@ -44,8 +45,10 @@ inoremap <leader>w ""<esc>:let leavechar='"'<cr>i
 nmap <C-Z> :shell<cr>
 " 把空格键映射成:
 nmap <space> :
-" 把 F8 映射到 启动NERDTree插件  
+" F8启动NERDTree插件
 map <F8> :NERDTree<CR>
+" F9启动taglist插件
+nnoremap <silent> <F9> :TlistToggle<CR>
 
 " CTRL-C  are Copy
 vnoremap <C-C> "+y
@@ -80,5 +83,3 @@ colorscheme blackboard  " 使用blackboard插件的配色
 let Tlist_Show_One_File=1    " 不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Exit_OnlyWindow=1  " 如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window=1 " 在右侧窗口中显示taglist窗口
-" F9打开taglist
-nnoremap <silent> <F9> :TlistToggle<CR>
