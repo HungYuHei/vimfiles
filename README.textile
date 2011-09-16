@@ -2,17 +2,23 @@ h1. HungYuHei's vimrc
 
 h2. Installtion
 
-h3. 1. Check out from github
+h3. 1. Backup your original vim files
+
+pre.
+mv ~/.vimrc ~/.vimrc_backup
+mv ~/.vim ~/.vim_backup
+
+h3. 2. Check out from github
 
 pre. 
 git clone git@github.com:HungYuHei/vimfiles.git ~/.vim
 
-h3. 2. Install ~/.vimrc
+h3. 3. Install ~/.vimrc
 
 pre. 
 ln -s ~/.vim/vimrc ~/.vimrc
 
-h3. 3. Install ctags
+h3. 4. Install ctags
 
 Ubuntu :
 
