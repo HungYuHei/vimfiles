@@ -49,6 +49,13 @@ nmap <space> :
 map <F8> :NERDTree<CR>
 " F9启动taglist插件
 nnoremap <silent> <F9> :TlistToggle<CR>
+" 在文件名上按gf时，在新的tab中打开
+" map gf :tabnew <cfile><cr>
+" Tab和Shift-Tab缩进
+nmap <tab> v>
+nmap <s-tab> v<
+vmap <tab> >gv
+vmap <s-tab> <gv
 
 " CTRL-C  are Copy
 vnoremap <C-C> "+y
