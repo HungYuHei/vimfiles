@@ -4,7 +4,7 @@ h2. Installtion
 
 h3. 1. Backup your original vim files
 
-pre.
+pre. 
 mv ~/.vimrc ~/.vimrc_backup
 mv ~/.vim ~/.vim_backup
 
