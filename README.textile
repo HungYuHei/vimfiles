@@ -11,7 +11,7 @@ mv ~/.vim ~/.vim_backup
 h3. 2. Check out from github
 
 pre. 
-git clone git@github.com:HungYuHei/vimfiles.git ~/.vim
+git clone git://github.com/HungYuHei/vimfiles.git ~/.vim
 
 h3. 3. Install ~/.vimrc
 
