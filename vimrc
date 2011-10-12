@@ -64,6 +64,10 @@ map <C-V> "+gP
 cmap <C-V> <C-R>+
 imap <C-V> <C-R>+
 
+" strip all trailing whitespace in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+" reselect the text that was just pasted
+nnoremap <leader>v V`]
 " <leader>s 水平分割窗口
 nnoremap <leader>s <C-w>s
 " <leader>v 垂直分割窗口
@@ -87,9 +91,6 @@ nmap <silent> <C-up> <C-W><up>
 imap <silent> <C-down> <esc><C-W><down>
 vmap <silent> <C-down> <esc><C-W><down>
 nmap <silent> <C-down> <C-W><down>
-
-" strip all trailing whitespace in the current file
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 colorscheme blackboard  " 使用blackboard插件的配色
 :filetype plugin on     " 启动snipMate插件
