@@ -24,7 +24,7 @@ Ubuntu :
 
 pre. 
 $ sudo apt-get install ctags
-$ sudo apt-get install ack
+$ sudo apt-get install ack-grep
 
 Fedora :
 
