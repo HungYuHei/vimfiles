@@ -27,7 +27,7 @@ set whichwrap+=<,>,h,l  " 退格键和方向键可以换行
 set fileencodings=utf-8 " 文件UTF-8编码
 set pastetoggle=<F2>    " 切换粘贴模式
 
-" 设置缩进 
+" 设置缩进
 set expandtab
 set smarttab
 set shiftwidth=2
@@ -87,6 +87,9 @@ nmap <silent> <C-up> <C-W><up>
 imap <silent> <C-down> <esc><C-W><down>
 vmap <silent> <C-down> <esc><C-W><down>
 nmap <silent> <C-down> <C-W><down>
+
+" strip all trailing whitespace in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 colorscheme blackboard  " 使用blackboard插件的配色
 :filetype plugin on     " 启动snipMate插件
