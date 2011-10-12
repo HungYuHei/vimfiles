@@ -74,6 +74,8 @@ nnoremap <leader>s <C-w>s
 nnoremap <leader>v <C-w>v
 " ack
 nnoremap <leader>a :Ack
+" Display the contents of the yankring
+nnoremap <leader>y :YRShow<CR>
 
 " 窗口区域切换,Ctrl+jkhl 来切换
 map <C-j> <C-W>j
