@@ -66,6 +66,8 @@ imap <C-V> <C-R>+
 
 " <leader>s 水平分割窗口
 nnoremap <leader>s <C-w>s
+" <leader>v 垂直分割窗口
+nnoremap <leader>v <C-w>v
 
 " 窗口区域切换,Ctrl+jkhl 来切换
 map <C-j> <C-W>j
