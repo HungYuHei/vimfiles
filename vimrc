@@ -68,10 +68,12 @@ imap <C-V> <C-R>+
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
 nnoremap <leader>v V`]
-" <leader>s 水平分割窗口
+" 水平分割窗口
 nnoremap <leader>s <C-w>s
-" <leader>v 垂直分割窗口
+" 垂直分割窗口
 nnoremap <leader>v <C-w>v
+" ack
+nnoremap <leader>a :Ack
 
 " 窗口区域切换,Ctrl+jkhl 来切换
 map <C-j> <C-W>j
