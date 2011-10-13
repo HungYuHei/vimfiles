@@ -67,7 +67,7 @@ imap <C-V> <C-R>+
 " strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
-nnoremap <leader>v V`]
+nnoremap <leader>V V`]
 " 水平分割窗口
 nnoremap <leader>s <C-w>s
 " 垂直分割窗口
