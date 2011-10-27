@@ -76,6 +76,10 @@ nnoremap <leader>v <C-w>v
 nnoremap <leader>a :Ack
 " Display the contents of the yankring
 nnoremap <leader>y :YRShow<CR>
+" highlight cursor column
+nnoremap <leader>lc :set cursorcolumn!<CR>
+" highlight cursor line
+nnoremap <leader>ll :set cursorline!<CR>
 
 " 窗口区域切换,Ctrl+jkhl 来切换
 map <C-j> <C-W>j
