@@ -45,8 +45,8 @@ inoremap <leader>w ""<esc>:let leavechar='"'<cr>i
 nmap <C-Z> :shell<cr>
 " 把空格键映射成:
 nmap <space> :
-" F8启动NERDTree插件
-map <F8> :NERDTree<CR>
+" NERDTree插件开关
+map <F8> :NERDTreeToggle<CR>
 " F9启动taglist插件
 nnoremap <silent> <F9> :TlistToggle<CR>
 " 在文件名上按gf时，在新的tab中打开
