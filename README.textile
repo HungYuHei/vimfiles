@@ -18,7 +18,7 @@ h3. 3. Install ~/.vimrc
 pre. 
 ln -s ~/.vim/vimrc ~/.vimrc
 
-h3. 4. Install dependent
+h3. 4. Install dependents
 
 Ubuntu :
 
@@ -32,11 +32,21 @@ pre.
 $ sudo yum install ctags
 $ sudo yum install ack
 
+h3. 4. Fetch submodules
+
+pre. 
+git submodule init
+git submodule update
+
+That's it, enjoy!
+please let me know if you have any issues.
+
 h2. Plugins
 
 * "The NERD tree":http://www.vim.org/scripts/script.php?script_id=1658 : A tree explorer plugin for navigating the filesystem
 * "vim-surround":http://www.vim.org/scripts/script.php?script_id=1697 : Plugin for deleting, changing, and adding "surroundings"
 * "BufExplorer":http://www.vim.org/scripts/script.php?script_id=42 : Quickly and easily switch between buffers
+* "NERDCommenter":http://www.vim.org/scripts/script.php?script_id=1218 : A plugin that allows for easy commenting of code for many filetypes
 * "Blackboard":http://www.vim.org/scripts/script.php?script_id=2280 : Clone of the Blackboard theme from textmate
 * "snipMate":http://www.vim.org/scripts/script.php?script_id=2540 : TextMate-style snippets for Vim
 * "TagList":http://www.vim.org/scripts/script.php?script_id=273 : Provide an overview of the structure of source code files

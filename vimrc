@@ -1,5 +1,8 @@
-syntax enable       " 语法高亮
+call pathogen#infect()
+
+syntax on       " 语法高亮
 filetype plugin indent on  " 文件类型检测
+filetype plugin on
 autocmd BufEnter * :syntax sync fromstart
 let mapleader=","
 
@@ -101,7 +104,6 @@ vmap <silent> <C-down> <esc><C-W><down>
 nmap <silent> <C-down> <C-W><down>
 
 colorscheme blackboard  " 使用blackboard插件的配色
-:filetype plugin on     " 启动snipMate插件
 
 " taglist插件配置
 let Tlist_Show_One_File=1    " 不同时显示多个文件的tag，只显示当前文件的
