@@ -20,6 +20,12 @@ ln -s ~/.vim/vimrc ~/.vimrc
 
 h3. 4. Install dependents
 
+Mac(homebrew) :
+
+pre. 
+$ brew install ctags
+$ brew install ack
+
 Ubuntu :
 
 pre. 
