@@ -103,7 +103,8 @@ imap <silent> <C-down> <esc><C-W><down>
 vmap <silent> <C-down> <esc><C-W><down>
 nmap <silent> <C-down> <C-W><down>
 
-colorscheme blackboard  " 使用blackboard插件的配色
+"colorscheme blackboard  " 使用blackboard插件的配色
+colorscheme monokai
 
 " taglist插件配置
 let Tlist_Show_One_File=1    " 不同时显示多个文件的tag，只显示当前文件的
