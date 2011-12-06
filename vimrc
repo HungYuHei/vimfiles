@@ -84,6 +84,17 @@ nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
 nnoremap <leader>ll :set cursorline!<CR>
 
+" Rails shortcuts
+nnoremap <leader>rc :Rcontroller
+nnoremap <leader>rsc :RScontroller
+nnoremap <leader>rvc :RVcontroller
+nnoremap <leader>rv :Rview
+nnoremap <leader>rsv :RSview
+nnoremap <leader>rvv :RVview
+nnoremap <leader>rm :Rmodel
+nnoremap <leader>rsm :RSmodel
+nnoremap <leader>rvm :RVmodel
+
 " 窗口区域切换,Ctrl+jkhl 来切换
 map <C-j> <C-W>j
 map <C-k> <C-W>k
