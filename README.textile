@@ -61,6 +61,7 @@ h2. Plugins
 * "ack":http://www.vim.org/scripts/script.php?script_id=2572 : integrates Ack with Vim’s quickfix window so you can easily search and jump to results
 * "rails":http://www.vim.org/scripts/script.php?script_id=1567 : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 * "YankRing":http://www.vim.org/scripts/script.php?script_id=1234 : Maintains a history of previous yanks, changes and deletes
+* "AutoComplPop":http://www.vim.org/scripts/script.php?script_id=1879 : Automatically opens popup menu for completions
 
 h2. Screenshot
 
