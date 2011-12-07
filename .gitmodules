@@ -10,3 +10,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/haml"]
+	path = bundle/haml
+	url = https://github.com/tpope/vim-haml.git
