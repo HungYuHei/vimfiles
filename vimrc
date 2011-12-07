@@ -133,3 +133,4 @@ let g:AutoComplPop_Behavior = {
 \ 'repeat' : 0}
 \ ]
 \}
+let g:acp_behaviorSnipmateLength=1
