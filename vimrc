@@ -29,6 +29,7 @@ set formatoptions+=mM   " 正确地处理中文字符的折行和拼接
 set whichwrap+=<,>,h,l  " 退格键和方向键可以换行
 set fileencodings=utf-8 " 文件UTF-8编码
 set pastetoggle=<F2>    " 切换粘贴模式
+set ruler
 
 " 设置缩进
 set expandtab
@@ -94,6 +95,9 @@ nnoremap <leader>rvv :RVview
 nnoremap <leader>rm :Rmodel
 nnoremap <leader>rsm :RSmodel
 nnoremap <leader>rvm :RVmodel
+nnoremap <leader>rf :Rfind
+nnoremap <leader>rsf :RSfind
+nnoremap <leader>rvf :RVfind
 
 " 窗口区域切换,Ctrl+jkhl 来切换
 map <C-j> <C-W>j
