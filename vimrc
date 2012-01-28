@@ -28,8 +28,10 @@ set guioptions-=R   " 隐藏右边滚动条
 set formatoptions+=mM   " 正确地处理中文字符的折行和拼接
 set whichwrap+=<,>,h,l  " 退格键和方向键可以换行
 set fileencodings=utf-8 " 文件UTF-8编码
-set pastetoggle=<F2>    " 切换粘贴模式
+set pastetoggle=<F10>    " 切换粘贴模式
 set ruler
+"set list
+"set listchars=tab:▸\ ,eol:¬
 
 " 设置缩进
 set expandtab
@@ -84,6 +86,9 @@ nnoremap <leader>y :YRShow<CR>
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
 nnoremap <leader>ll :set cursorline!<CR>
+
+nnoremap <leader>ms :set colorcolumn=80<CR>
+nnoremap <leader>mh :set colorcolumn=0<CR>
 
 " Rails shortcuts
 nnoremap <leader>rc :Rcontroller
