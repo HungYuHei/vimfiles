@@ -132,10 +132,10 @@ let Tlist_Exit_OnlyWindow=1  " 如果taglist窗口是最后一个窗口，则退
 let Tlist_Use_Right_Window=1 " 在右侧窗口中显示taglist窗口
 
 " AutoComplPop
-let g:AutoComplPop_Behavior = {
-\ 'c': [ {'command' : "\<C-x>\<C-o>",
-\ 'pattern' : ".",
-\ 'repeat' : 0}
-\ ]
-\}
-let g:acp_behaviorSnipmateLength=1
+"let g:AutoComplPop_Behavior = {
+"\ 'c': [ {'command' : "\<C-x>\<C-o>",
+"\ 'pattern' : ".",
+"\ 'repeat' : 0}
+"\ ]
+"\}
+"let g:acp_behaviorSnipmateLength=1
