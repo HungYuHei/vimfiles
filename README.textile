@@ -61,6 +61,8 @@ h2. Plugins
 * "YankRing":http://www.vim.org/scripts/script.php?script_id=1234 : Maintains a history of previous yanks, changes and deletes
 * "AutoComplPop":http://www.vim.org/scripts/script.php?script_id=1879 : Automatically opens popup menu for completions
 * "delimitMate":http://www.vim.org/scripts/script.php?script_id=2754 : Provides auto-balancing and some expansions for parens, quotes, etc. 
+* "matchit":http://www.vim.org/scripts/script.php?script_id=39 : Extended % matching for HTML, LaTeX, and many other languages
+* "vim-css-color":https://github.com/skammer/vim-css-color : Highlight colors in css files
 
 h2. Screenshot
 
