@@ -53,7 +53,7 @@ h2. Plugins
 * "vim-surround":http://www.vim.org/scripts/script.php?script_id=1697 : Plugin for deleting, changing, and adding "surroundings"
 * "BufExplorer":http://www.vim.org/scripts/script.php?script_id=42 : Quickly and easily switch between buffers
 * "NERDCommenter":http://www.vim.org/scripts/script.php?script_id=1218 : A plugin that allows for easy commenting of code for many filetypes
-* "snipMate":https://github.com/garbas/vim-snipmate : TextMate-style snippets for Vim
+* "snipMate":http://www.vim.org/scripts/script.php?script_id=2540 : TextMate-style snippets for Vim
 * "TagList":http://www.vim.org/scripts/script.php?script_id=273 : Provide an overview of the structure of source code files
 * "git-vim":https://github.com/motemen/git-vim : Call git functions from inside Vim
 * "ack":http://www.vim.org/scripts/script.php?script_id=2572 : integrates Ack with Vim’s quickfix window so you can easily search and jump to results
