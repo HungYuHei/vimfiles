@@ -32,12 +32,6 @@ pre.
 $ sudo apt-get install ctags
 $ sudo apt-get install ack-grep
 
-Fedora :
-
-pre. 
-$ sudo yum install ctags
-$ sudo yum install ack
-
 h3. 4. Fetch submodules
 
 pre. 
@@ -46,6 +40,26 @@ git submodule update
 
 That's it, enjoy!
 please let me know if you have any issues.
+
+h2. Keyboard shortcuts
+
+* `<F8>` Toggle NERDTree
+* `<F9>` Toggle TagList
+* `<F10>` Toggle paste mode
+* `<leader><leader>` Trig EasyMotion (for example: `<leader><leader>w` `<leader><leader>f` etc.)
+* `<leader>s` Horizontally split window
+* `<leader>v` Vertically split window
+* `Ctrl-[hjkl]` Move between windows (left down up right)
+
+* `<leader>a` `:Ack`
+* `<leader>v` Reselect the text that was just pasted
+* `<leader>W` Strip all trailing whitespace in the current file
+* `<leader>y` Display the contents of the yankring
+* `<leader>lc` Toggle highlight cursor column
+* `<leader>ll` Toggle highlight cursor line
+* `<leader>ms` Display 80-column indication
+* `<leader>mh` Hide 80-column indication
+* `<leader>be` Toggle NERDCommenter
 
 h2. Plugins
 
