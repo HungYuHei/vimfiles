@@ -69,7 +69,6 @@ please let me know if you have any issues.
 
 ## Plugins
 
-* [NERD](http://ddddd) : ddddddddddddd
 * [The NERD tree](http://www.vim.org/scripts/script.php?script_id=1658) : A tree explorer plugin for navigating the filesystem
 * [vim-surround](http://www.vim.org/scripts/script.php?script_id=1697) : Plugin for deleting, changing, and adding "surroundings"
 * [BufExplorer](http://www.vim.org/scripts/script.php?script_id=42) : Quickly and easily switch between buffers
