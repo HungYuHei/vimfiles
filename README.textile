@@ -63,6 +63,7 @@ h2. Plugins
 * "delimitMate":http://www.vim.org/scripts/script.php?script_id=2754 : Provides auto-balancing and some expansions for parens, quotes, etc. 
 * "matchit":http://www.vim.org/scripts/script.php?script_id=39 : Extended % matching for HTML, LaTeX, and many other languages
 * "vim-css-color":https://github.com/skammer/vim-css-color : Highlight colors in css files
+* "EasyMotion":https://github.com/Lokaltog/vim-easymotion : Vim motions on speed
 
 h2. Screenshot
 
