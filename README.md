@@ -65,7 +65,8 @@ please let me know if you have any issues.
 * `<leader>ll` Toggle highlight cursor line
 * `<leader>ms` Display 80-column indication
 * `<leader>mh` Hide 80-column indication
-* `<leader>be` Toggle NERDCommenter
+* `<leader>be` Toggle BufExplorer
+* `<leader>c<space>` Toggle NERDCommenter
 
 ## Plugins
 
