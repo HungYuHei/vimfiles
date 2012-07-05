@@ -51,6 +51,8 @@ inoremap <leader>w ""<esc>:let leavechar='"'<cr>i
 nmap <C-Z> :shell<cr>
 " 把空格键映射成:
 nmap <space> :
+" 在NERDTree显示对应文件位置
+map <F7> :NERDTreeFind<CR>
 " NERDTree插件开关
 map <F8> :NERDTreeToggle<CR>
 " F9启动taglist插件
