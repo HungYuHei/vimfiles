@@ -49,6 +49,7 @@ please let me know if you have any issues.
 
 ## Keyboard shortcuts
 
+* `<F7>` Toggle NERDTreeFind
 * `<F8>` Toggle NERDTree
 * `<F9>` Toggle TagList
 * `<F10>` Toggle paste mode
