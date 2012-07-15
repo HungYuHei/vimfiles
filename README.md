@@ -56,15 +56,14 @@ please let me know if you have any issues.
 * `<F8>` Toggle NERDTree
 * `<F9>` Toggle TagList
 * `<F10>` Toggle paste mode
-* `<leader><leader>` Trig EasyMotion (for example: `<leader><leader>w` `<leader><leader>f` etc.)
+* `<leader><leader>` Trig EasyMotion (for e.g. `<leader><leader>w` `<leader><leader>f` etc.)
 * `<leader>s` Horizontally split window
 * `<leader>v` Vertically split window
-* `Ctrl-[hjkl]` Move between windows (left down up right)
+* `Ctrl[hjkl]` Move between windows (left down up right)
 
 * `<leader>a` `:Ack`
 * `<leader>v` Reselect the text that was just pasted
 * `<leader>W` Strip all trailing whitespace in the current file
-* `<leader>y` Display the contents of the yankring
 * `<leader>lc` Toggle highlight cursor column
 * `<leader>ll` Toggle highlight cursor line
 * `<leader>ms` Display 80-column indication
