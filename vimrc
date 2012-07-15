@@ -5,6 +5,7 @@ filetype plugin indent on  " 文件类型检测
 filetype plugin on
 autocmd BufEnter * :syntax sync fromstart
 let mapleader=","
+au FocusLost * :up " auto save files when focus is lost
 
 set nocompatible    " 关闭兼容模式
 set autoindent      " 打开自动缩,继承前一行的缩进方式，特别适用于多行注释
