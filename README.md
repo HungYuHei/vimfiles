@@ -40,6 +40,7 @@ $ sudo apt-get install ack-grep
 ### 5. Fetch submodules
 
 ```
+cd ~/.vim
 git submodule init
 git submodule update
 ```
@@ -48,6 +49,8 @@ That's it, enjoy!
 please let me know if you have any issues.
 
 ## Keyboard shortcuts
+
+**Please keep your mind that `<leader>` is set to `,`*o
 
 * `<F7>` Toggle NERDTreeFind
 * `<F8>` Toggle NERDTree
