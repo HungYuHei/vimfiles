@@ -50,7 +50,7 @@ please let me know if you have any issues.
 
 ## Keyboard shortcuts
 
-**Please keep your mind that `<leader>` is set to `,`*o
+**Please keep your mind that `<leader>` is set to `,`**
 
 * `<F7>` Toggle NERDTreeFind
 * `<F8>` Toggle NERDTree
