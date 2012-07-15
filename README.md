@@ -56,7 +56,7 @@ please let me know if you have any issues.
 * `<F8>` Toggle NERDTree
 * `<F9>` Toggle TagList
 * `<F10>` Toggle paste mode
-* `<leader><leader>` Trig EasyMotion (for e.g. `<leader><leader>w` `<leader><leader>f` etc.)
+* `<leader><leader>` Trig EasyMotion (e.g. `<leader><leader>w` `<leader><leader>f` etc.)
 * `<leader>s` Horizontally split window
 * `<leader>v` Vertically split window
 * `Ctrl[hjkl]` Move between windows (left down up right)
@@ -70,6 +70,8 @@ please let me know if you have any issues.
 * `<leader>mh` Hide 80-column indication
 * `<leader>be` Toggle BufExplorer
 * `<leader>c<space>` Toggle NERDCommenter
+
+**Please reference to the plugin's homepage below to see more shortcuts**
 
 ## Plugins
 
