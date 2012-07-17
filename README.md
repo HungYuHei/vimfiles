@@ -84,7 +84,6 @@ please let me know if you have any issues.
 * [git-vim](https://github.com/motemen/git-vim) : Call git functions from inside Vim
 * [ack](http://www.vim.org/scripts/script.php?script_id=2572) : integrates Ack with Vim’s quickfix window so you can easily search and jump to results
 * [rails](http://www.vim.org/scripts/script.php?script_id=1567) : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
-* [YankRing](http://www.vim.org/scripts/script.php?script_id=1234) : Maintains a history of previous yanks, changes and deletes
 * [AutoComplPop](http://www.vim.org/scripts/script.php?script_id=1879) : Automatically opens popup menu for completions
 * [delimitMate](http://www.vim.org/scripts/script.php?script_id=2754) : Provides auto-balancing and some expansions for parens, quotes, etc. 
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39) : Extended % matching for HTML, LaTeX, and many other languages

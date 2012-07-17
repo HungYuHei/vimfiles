@@ -89,8 +89,6 @@ nnoremap <leader>s <C-w>s
 nnoremap <leader>v <C-w>v
 " ack
 nnoremap <leader>a :Ack
-" Display the contents of the yankring
-nnoremap <leader>y :YRShow<CR>
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
