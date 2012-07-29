@@ -132,3 +132,9 @@ let Tlist_Use_Right_Window=1 " 在右侧窗口中显示taglist窗口
 "\ ]
 "\}
 "let g:acp_behaviorSnipmateLength=1
+
+" ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp
+let g:ctrlp_working_path_mode = 2
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.DS_Store  " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'

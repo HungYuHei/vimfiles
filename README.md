@@ -59,7 +59,8 @@ please let me know if you have any issues.
 * `<leader><leader>` Trig EasyMotion (e.g. `<leader><leader>w` `<leader><leader>f` etc.)
 * `<leader>s` Horizontally split window
 * `<leader>v` Vertically split window
-* `Ctrl[hjkl]` Move between windows (left down up right)
+* `Ctrl-[hjkl]` Move between windows (left down up right)
+* `Ctrl-p` Invoke ctrlP (reference: [ctrlP homepage](http://www.vim.org/scripts/script.php?script_id=1658))
 
 * `<leader>a` `:Ack`
 * `<leader>v` Reselect the text that was just pasted
@@ -89,6 +90,7 @@ please let me know if you have any issues.
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39) : Extended % matching for HTML, LaTeX, and many other languages
 * [vim-css-color](https://github.com/skammer/vim-css-color) : Highlight colors in css files
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion) : Vim motions on speed
+* [ctrlP](https://github.com/kien/ctrlp.vim) : Fuzzy file, buffer, mru, tag, etc finder
 
 ## Screenshot
 
