@@ -60,7 +60,7 @@ please let me know if you have any issues.
 * `<leader>s` Horizontally split window
 * `<leader>v` Vertically split window
 * `Ctrl-[hjkl]` Move between windows (left down up right)
-* `Ctrl-p` Invoke ctrlP (reference: [ctrlP homepage](http://www.vim.org/scripts/script.php?script_id=1658))
+* `Ctrl-p` Invoke ctrlP (reference: [ctrlP homepage](https://github.com/kien/ctrlp.vim))
 
 * `<leader>a` `:Ack`
 * `<leader>v` Reselect the text that was just pasted
