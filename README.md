@@ -71,6 +71,7 @@ please let me know if you have any issues.
 * `<leader>mh` Hide 80-column indication
 * `<leader>be` Toggle BufExplorer
 * `<leader>c<space>` Toggle NERDCommenter
+* `<leader>z` Toggle between one window and multi-window (Powered by [ZoomWin](https://github.com/vim-scripts/ZoomWin))
 
 **Please reference to the plugin's homepage below to see more shortcuts**
 
@@ -91,6 +92,7 @@ please let me know if you have any issues.
 * [vim-css-color](https://github.com/skammer/vim-css-color) : Highlight colors in css files
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion) : Vim motions on speed
 * [ctrlP](https://github.com/kien/ctrlp.vim) : Fuzzy file, buffer, mru, tag, etc finder
+* [ZoomWin](https://github.com/vim-scripts/ZoomWin) : Zoom in/out of windows (toggle between one window and multi-window)
 
 ## Screenshot
 

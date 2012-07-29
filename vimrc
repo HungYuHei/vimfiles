@@ -97,6 +97,9 @@ nnoremap <leader>ll :set cursorline!<CR>
 nnoremap <leader>ms :set colorcolumn=80<CR>
 nnoremap <leader>mh :set colorcolumn=0<CR>
 
+" toggle between one window and multi-window (ZoomWin plugin)
+map <leader>z <C-w>o
+
 " 窗口区域切换,Ctrl+jkhl 来切换
 map <C-j> <C-W>j
 map <C-k> <C-W>k
