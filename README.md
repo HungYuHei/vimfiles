@@ -63,6 +63,8 @@ please let me know if you have any issues.
 * `Ctrl-p` Invoke ctrlP (reference: [ctrlP homepage](https://github.com/kien/ctrlp.vim))
 
 * `<leader>a` `:Ack`
+* `<leader>cf` `copy the file's relative path to the clipboard`
+* `<leader>cp` `copy the file's absoulte path to the clipboard`
 * `<leader>v` Reselect the text that was just pasted
 * `<leader>W` Strip all trailing whitespace in the current file
 * `<leader>lc` Toggle highlight cursor column

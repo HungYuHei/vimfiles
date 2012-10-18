@@ -119,6 +119,10 @@ imap <silent> <C-down> <esc><C-W><down>
 vmap <silent> <C-down> <esc><C-W><down>
 nmap <silent> <C-down> <C-W><down>
 
+" copy the file relative/absoulte path to the clipboard
+nmap ,cf :let @*=expand("%")<CR>
+nmap ,cp :let @*=expand("%:p")<CR>
+
 "colorscheme blackboard  " 使用blackboard插件的配色
 colorscheme monokai
 
