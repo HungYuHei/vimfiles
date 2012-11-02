@@ -31,3 +31,6 @@
 [submodule "bundle/ZoomWin"]
 	path = bundle/ZoomWin
 	url = git://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
