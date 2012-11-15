@@ -72,13 +72,6 @@ nmap <s-tab> v<
 vmap <tab> >gv
 vmap <s-tab> <gv
 
-" CTRL-C  are Copy
-vnoremap <C-C> "+y
-" CTRL-V are Paste
-map <C-V> "+gP
-cmap <C-V> <C-R>+
-imap <C-V> <C-R>+
-
 " strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
