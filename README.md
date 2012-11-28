@@ -40,6 +40,10 @@ $ sudo apt-get install ack-grep
 ### 5. Fetch submodules
 
 ```
+# run this command only if you are using server branch
+cd ~/.vim/bundle && git rm --cache css_color ctrlp delimitMate git_vim haml snipmate vim-slim ZoomWin
+
+# you are required to run this commands
 cd ~/.vim
 git submodule init
 git submodule update
