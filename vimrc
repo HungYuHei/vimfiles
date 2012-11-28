@@ -62,8 +62,6 @@ nmap <space> :
 map <F7> :NERDTreeFind<CR>
 " NERDTree插件开关
 map <F8> :NERDTreeToggle<CR>
-" F9启动taglist插件
-nnoremap <silent> <F9> :TlistToggle<CR>
 " 在文件名上按gf时，在新的tab中打开
 " map gf :tabnew <cfile><cr>
 " Tab和Shift-Tab缩进
@@ -90,9 +88,6 @@ nnoremap <leader>ll :set cursorline!<CR>
 nnoremap <leader>ms :set colorcolumn=80<CR>
 nnoremap <leader>mh :set colorcolumn=0<CR>
 
-" toggle between one window and multi-window (ZoomWin plugin)
-map <leader>z <C-w>o
-
 " 窗口区域切换,Ctrl+jkhl 来切换
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -105,24 +100,3 @@ nmap ,cp :let @*=expand("%:p")<CR>
 
 "colorscheme blackboard  " 使用blackboard插件的配色
 colorscheme monokai
-
-" taglist插件配置
-let Tlist_Show_One_File=1    " 不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow=1  " 如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window=1 " 在右侧窗口中显示taglist窗口
-
-" AutoComplPop
-"let g:AutoComplPop_Behavior = {
-"\ 'c': [ {'command' : "\<C-x>\<C-o>",
-"\ 'pattern' : ".",
-"\ 'repeat' : 0}
-"\ ]
-"\}
-"let g:acp_behaviorSnipmateLength=1
-
-" ctrlp
-set runtimepath^=~/.vim/bundle/ctrlp
-let g:ctrlp_working_path_mode = 2
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.DS_Store  " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags' " hard code here, maybe only works on my Mac
