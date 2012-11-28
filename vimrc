@@ -98,5 +98,5 @@ map <C-l> <C-W>l
 nmap ,cf :let @*=expand("%")<CR>
 nmap ,cp :let @*=expand("%:p")<CR>
 
-"colorscheme blackboard  " 使用blackboard插件的配色
-colorscheme monokai
+colorscheme blackboard  " 使用blackboard插件的配色
+"colorscheme monokai
