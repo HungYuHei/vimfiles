@@ -98,19 +98,6 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-" 窗口区域切换,Ctrl+↑↓←→  来切换
-imap <silent> <C-left> <esc><C-W><left>
-vmap <silent> <C-left> <esc><C-W><left>
-nmap <silent> <C-left> <C-W><left>
-imap <silent> <C-right> <esc><C-W><right>
-vmap <silent> <C-right> <esc><C-W><right>
-nmap <silent> <C-right> <C-W><right>
-imap <silent> <C-up> <esc><C-W><up>
-vmap <silent> <C-up> <esc><C-W><up>
-nmap <silent> <C-up> <C-W><up>
-imap <silent> <C-down> <esc><C-W><down>
-vmap <silent> <C-down> <esc><C-W><down>
-nmap <silent> <C-down> <C-W><down>
 
 " copy the file relative/absoulte path to the clipboard
 nmap ,cf :let @*=expand("%")<CR>
