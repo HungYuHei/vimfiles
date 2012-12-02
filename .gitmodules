@@ -37,3 +37,6 @@
 [submodule "bundle/vim-slim"]
 	path = bundle/vim-slim
 	url = git://github.com/bbommarito/vim-slim.git
+[submodule "bundle/toggle_words"]
+	path = bundle/toggle_words
+	url = git://github.com/vim-scripts/toggle_words.vim.git
