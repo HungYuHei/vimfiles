@@ -15,7 +15,7 @@ mv ~/.vim ~/.vim_backup
 git clone git://github.com/HungYuHei/vimfiles.git ~/.vim
 ```
 
-### 3. Install ~/.vimrc
+### 3. Link ~/.vimrc
 
 ```
 ln -s ~/.vim/vimrc ~/.vimrc
@@ -78,6 +78,8 @@ please let me know if you have any issues.
 * `<leader>be` Toggle BufExplorer
 * `<leader>c<space>` Toggle NERDCommenter
 * `<leader>z` Toggle between one window and multi-window (Powered by [ZoomWin](https://github.com/vim-scripts/ZoomWin))
+* `<leader>ig` Toggle indent guides
+* `<leader>t` Toggle words (e.g. 'true'=>'false')
 
 **Please reference to the plugin's homepage below to see more shortcuts**
 
@@ -99,6 +101,8 @@ please let me know if you have any issues.
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion) : Vim motions on speed
 * [ctrlP](https://github.com/kien/ctrlp.vim) : Fuzzy file, buffer, mru, tag, etc finder
 * [ZoomWin](https://github.com/vim-scripts/ZoomWin) : Zoom in/out of windows (toggle between one window and multi-window)
+* [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) : A Vim plugin for visually displaying indent levels in code
+* [toggle-words](http://www.vim.org/scripts/script.php?script_id=1676) : Toggle words like: 'true'=>'false', 'True'=>'False' etc
 
 ## Screenshot
 
