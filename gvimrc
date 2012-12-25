@@ -1,5 +1,6 @@
 " 字体
-set guifont=Monaco:h16
+"set guifont=Monaco:h16
+set guifont=Menlo:h16
 " 光标不闪烁
 set gcr=a:block-blinkon0
 " 隐藏左、右、底部滚动条
