@@ -40,3 +40,6 @@
 [submodule "bundle/toggle_words"]
 	path = bundle/toggle_words
 	url = git://github.com/vim-scripts/toggle_words.vim.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
