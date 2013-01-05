@@ -92,7 +92,7 @@ please let me know if you have any issues.
 * [snipMate](http://www.vim.org/scripts/script.php?script_id=2540) : TextMate-style snippets for Vim
 * [TagList](http://www.vim.org/scripts/script.php?script_id=273) : Provide an overview of the structure of source code files
 * [git-vim](https://github.com/motemen/git-vim) : Call git functions from inside Vim
-* [ack](http://www.vim.org/scripts/script.php?script_id=2572) : integrates Ack with Vim’s quickfix window so you can easily search and jump to results
+* [ack](https://github.com/mileszs/ack.vim) : integrates Ack with Vim’s quickfix window so you can easily search and jump to results
 * [rails](http://www.vim.org/scripts/script.php?script_id=1567) : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 * [AutoComplPop](http://www.vim.org/scripts/script.php?script_id=1879) : Automatically opens popup menu for completions
 * [delimitMate](http://www.vim.org/scripts/script.php?script_id=2754) : Provides auto-balancing and some expansions for parens, quotes, etc. 
