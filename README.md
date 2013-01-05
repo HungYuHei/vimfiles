@@ -103,6 +103,7 @@ please let me know if you have any issues.
 * [ZoomWin](https://github.com/vim-scripts/ZoomWin) : Zoom in/out of windows (toggle between one window and multi-window)
 * [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) : A Vim plugin for visually displaying indent levels in code
 * [toggle-words](http://www.vim.org/scripts/script.php?script_id=1676) : Toggle words like: 'true'=>'false', 'True'=>'False' etc
+* [vim-repeat](https://github.com/tpope/vim-repeat) : Enable repeating supported plugin maps with "."
 
 ## Screenshot
 
