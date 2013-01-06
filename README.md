@@ -91,11 +91,11 @@ please let me know if you have any issues.
 * [NERDCommenter](http://www.vim.org/scripts/script.php?script_id=1218) : A plugin that allows for easy commenting of code for many filetypes
 * [snipMate](http://www.vim.org/scripts/script.php?script_id=2540) : TextMate-style snippets for Vim
 * [TagList](http://www.vim.org/scripts/script.php?script_id=273) : Provide an overview of the structure of source code files
-* [git-vim](https://github.com/motemen/git-vim) : Call git functions from inside Vim
+* [fugitive](https://github.com/tpope/vim-fugitive) : A Git wrapper so awesome, it should be illegal
 * [ack](https://github.com/mileszs/ack.vim) : integrates Ack with Vim’s quickfix window so you can easily search and jump to results
 * [rails](http://www.vim.org/scripts/script.php?script_id=1567) : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 * [AutoComplPop](http://www.vim.org/scripts/script.php?script_id=1879) : Automatically opens popup menu for completions
-* [delimitMate](http://www.vim.org/scripts/script.php?script_id=2754) : Provides auto-balancing and some expansions for parens, quotes, etc. 
+* [delimitMate](http://www.vim.org/scripts/script.php?script_id=2754) : Provides auto-balancing and some expansions for parens, quotes, etc.
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39) : Extended % matching for HTML, LaTeX, and many other languages
 * [vim-css-color](https://github.com/skammer/vim-css-color) : Highlight colors in css files
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion) : Vim motions on speed
