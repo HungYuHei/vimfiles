@@ -65,7 +65,7 @@ vmap <tab> >gv
 vmap <s-tab> <gv
 
 " strip all trailing whitespace in the current file
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
 nnoremap <leader>V V`]
 " 水平分割窗口

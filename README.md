@@ -70,7 +70,7 @@ please let me know if you have any issues.
 * `<leader>cf` copy the file's relative path to the clipboard
 * `<leader>cp` copy the file's absoulte path to the clipboard
 * `<leader>v` Reselect the text that was just pasted
-* `<leader>W` Strip all trailing whitespace in the current file
+* `<leader>w` Strip all trailing whitespace in the current file
 * `<leader>lc` Toggle highlight cursor column
 * `<leader>ll` Toggle highlight cursor line
 * `<leader>ms` Display 80-column indication
