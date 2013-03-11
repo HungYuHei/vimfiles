@@ -40,14 +40,6 @@ set smarttab
 set shiftwidth=2
 set tabstop=2
 
-" 自动完成括号和引号
-inoremap <leader>1 ()<esc>:let leavechar=")"<cr>i
-inoremap <leader>2 []<esc>:let leavechar="]"<cr>i
-inoremap <leader>3 {}<esc>:let leavechar="}"<cr>i
-inoremap <leader>4 {<esc>o}<esc>:let leavechar="}"<cr>O
-inoremap <leader>q ''<esc>:let leavechar="'"<cr>i
-inoremap <leader>w ""<esc>:let leavechar='"'<cr>i
-
 " 映射 Mac 风格的光标控制
 inoremap <C-e> <END>
 inoremap <C-a> <HOME>
