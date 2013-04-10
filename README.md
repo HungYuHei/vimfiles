@@ -26,15 +26,16 @@ ln -s ~/.vim/vimrc ~/.vimrc
 ######Mac(homebrew) :
 
 ```
-$ brew install ctags
-$ brew install ack
+brew update
+brew install ctags
+brew install the_silver_searcher
 ```
 
 ######Ubuntu :
 
 ```
-$ sudo apt-get install ctags
-$ sudo apt-get install ack-grep
+sudo apt-get install ctags
+# Install the_silver_searcher, take a look at https://github.com/ggreer/the_silver_searcher
 ```
 
 ### 5. Fetch submodules
@@ -65,8 +66,7 @@ please let me know if you have any issues.
 * `<leader>v` Vertically split window
 * `Ctrl-[hjkl]` Move between windows (left down up right)
 * `Ctrl-p` Invoke ctrlP (reference: [ctrlP homepage](https://github.com/kien/ctrlp.vim))
-
-* `<leader>a` `:Ack`
+* `<leader>a` `:Ag`
 * `<leader>cf` copy the file's relative path to the clipboard
 * `<leader>cp` copy the file's absoulte path to the clipboard
 * `<leader>v` Reselect the text that was just pasted
@@ -92,7 +92,7 @@ please let me know if you have any issues.
 * [snipMate](http://www.vim.org/scripts/script.php?script_id=2540) : TextMate-style snippets for Vim
 * [TagList](http://www.vim.org/scripts/script.php?script_id=273) : Provide an overview of the structure of source code files
 * [fugitive](https://github.com/tpope/vim-fugitive) : A Git wrapper so awesome, it should be illegal
-* [ack](https://github.com/mileszs/ack.vim) : integrates Ack with Vim’s quickfix window so you can easily search and jump to results
+* [the_silver_searcher](https://github.com/rking/ag.vim) : Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
 * [rails](http://www.vim.org/scripts/script.php?script_id=1567) : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 * [AutoComplPop](http://www.vim.org/scripts/script.php?script_id=1879) : Automatically opens popup menu for completions
 * [delimitMate](http://www.vim.org/scripts/script.php?script_id=2754) : Provides auto-balancing and some expansions for parens, quotes, etc.

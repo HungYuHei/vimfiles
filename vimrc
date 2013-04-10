@@ -72,8 +72,8 @@ nnoremap <leader>V V`]
 nnoremap <leader>s <C-w>s
 " 垂直分割窗口
 nnoremap <leader>v <C-w>v
-" ack
-nnoremap <leader>a :Ack
+" Ag
+nnoremap <leader>a :Ag
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
