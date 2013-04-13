@@ -88,6 +88,9 @@ map <leader>z <C-w>o
 " ToggleWord plugin
 nmap <leader>t :ToggleWord<CR>
 
+" zen-coding
+map <leader>c <C-y>
+
 " 窗口区域切换,Ctrl+jkhl 来切换
 map <C-j> <C-W>j
 map <C-k> <C-W>k

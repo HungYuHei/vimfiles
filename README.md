@@ -105,6 +105,7 @@ please let me know if you have any issues.
 * [toggle-words](http://www.vim.org/scripts/script.php?script_id=1676) : Toggle words like: 'true'=>'false', 'True'=>'False' etc
 * [vim-repeat](https://github.com/tpope/vim-repeat) : Enable repeating supported plugin maps with "."
 * [Tabular](https://github.com/godlygeek/tabular) : Vim script for text filtering and alignment
+* [zen-coding](https://github.com/mattn/zencoding-vim) : A web-developer’s toolkit that can greatly improve your HTML & CSS workflow
 
 ## Screenshot
 
