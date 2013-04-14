@@ -107,6 +107,7 @@ please let me know if you have any issues.
 * [Tabular](https://github.com/godlygeek/tabular) : Vim script for text filtering and alignment
 * [zen-coding](https://github.com/mattn/zencoding-vim) : A web-developer’s toolkit that can greatly improve your HTML & CSS workflow
 * [vim-javascript](https://github.com/pangloss/vim-javascript) : Provides syntax and indent plugins.
+* [vim-coffee-script](https://github.com/kchmck/vim-coffee-script) : CoffeeScript support for vim.
 
 ## Screenshot
 
