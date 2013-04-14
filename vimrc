@@ -132,3 +132,6 @@ let g:ctrlp_working_path_mode = 2
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags' " hard code here, maybe only works on my Mac
+
+" javascript taglist
+let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:function'
