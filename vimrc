@@ -135,3 +135,8 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags' " hard code here, maybe only works on
 
 " javascript taglist
 let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:function'
+
+" javascript indentation in html
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style1 = "inc"
