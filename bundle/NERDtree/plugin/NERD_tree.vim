@@ -136,23 +136,16 @@ call s:initVariable("g:NERDTreeMapUpdirKeepOpen", "U")
 call s:initVariable("g:NERDTreeMapCWD", "CD")
 
 "SECTION: Load class files{{{2
-runtime plugin/nerdtree/path.vim
-runtime plugin/nerdtree/menu_controller.vim
-runtime plugin/nerdtree/menu_item.vim
-runtime plugin/nerdtree/key_map.vim
-runtime plugin/nerdtree/bookmark.vim
-runtime plugin/nerdtree/tree_file_node.vim
-runtime plugin/nerdtree/tree_dir_node.vim
-runtime plugin/nerdtree/opener.vim
+call nerdtree#loadClassFiles()
 
 " SECTION: Commands {{{1
 "============================================================
 "init the command that users start the nerd tree with
-command! -n=? -complete=dir -bar NERDTree :call nerdtree#initNerdTree('<args>')
-command! -n=? -complete=dir -bar NERDTreeToggle :call nerdtree#toggle('<args>')
+command! -n=? -complete=dir -bar NERDTree :call g:NERDTreeCreator.CreatePrimary('<args>')
+command! -n=? -complete=dir -bar NERDTreeToggle :call g:NERDTreeCreator.TogglePrimary('<args>')
 command! -n=0 -bar NERDTreeClose :call nerdtree#closeTreeIfOpen()
-command! -n=1 -complete=customlist,nerdtree#completeBookmarks -bar NERDTreeFromBookmark call nerdtree#initNerdTree('<args>')
-command! -n=0 -bar NERDTreeMirror call nerdtree#initNerdTreeMirror()
+command! -n=1 -complete=customlist,nerdtree#completeBookmarks -bar NERDTreeFromBookmark call g:NERDTreeCreator.CreatePrimary('<args>')
+command! -n=0 -bar NERDTreeMirror call g:NERDTreeCreator.CreateMirror()
 command! -n=0 -bar NERDTreeFind call nerdtree#findAndRevealPath()
 command! -n=0 -bar NERDTreeFocus call NERDTreeFocus()
 command! -n=0 -bar NERDTreeCWD call NERDTreeCWD()
@@ -160,10 +153,10 @@ command! -n=0 -bar NERDTreeCWD call NERDTreeCWD()
 "============================================================
 augroup NERDTree
     "Save the cursor position whenever we close the nerd tree
-    exec "autocmd BufWinLeave ". nerdtree#bufNamePrefix() ."* call nerdtree#saveScreenState()"
+    exec "autocmd BufWinLeave ". g:NERDTreeCreator.BufNamePrefix() ."* call nerdtree#saveScreenState()"
 
     "disallow insert mode in the NERDTree
-    exec "autocmd BufEnter ". nerdtree#bufNamePrefix() ."* stopinsert"
+    exec "autocmd BufEnter ". g:NERDTreeCreator.BufNamePrefix() ."* stopinsert"
 augroup END
 
 if g:NERDTreeHijackNetrw
@@ -200,7 +193,7 @@ function! NERDTreeFocus()
     if nerdtree#isTreeOpen()
         call nerdtree#putCursorInTreeWin()
     else
-        call nerdtree#toggle("")
+        call g:NERDTreeCreator.TogglePrimary("")
     endif
 endfunction
 

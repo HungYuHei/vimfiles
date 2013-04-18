@@ -33,16 +33,11 @@ function! nerdtree#bufInWindows(bnum)
     return cnt
 endfunction
 
-" FUNCTION: nerdtree#bufNamePrefix() {{{2
-function! nerdtree#bufNamePrefix()
-    return 'NERD_tree_'
-endfunction
-
 "FUNCTION: nerdtree#checkForBrowse(dir) {{{2
 "inits a secondary nerd tree in the current buffer if appropriate
 function! nerdtree#checkForBrowse(dir)
     if a:dir != '' && isdirectory(a:dir)
-        call nerdtree#initNerdTreeInPlace(a:dir)
+        call g:NERDTreeCreator.CreateSecondary(a:dir)
     endif
 endfunction
 
@@ -103,7 +98,7 @@ function! nerdtree#createDefaultBindings()
 
     call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapQuit, 'scope': "all", 'callback': s."closeTreeWindow" })
 
-    call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapCWD, 'scope': "all", 'callback': s."chRootCwd" })
+    call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapCWD, 'scope': "all", 'callback': "nerdtree#chRootCwd" })
 
     call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapRefreshRoot, 'scope': "all", 'callback': s."refreshRoot" })
     call NERDTreeAddKeyMap({ 'key': g:NERDTreeMapRefresh, 'scope': "Node", 'callback': s."refreshCurrent" })
@@ -193,14 +188,14 @@ function! nerdtree#findAndRevealPath()
         endtry
 
         if p.isUnder(cwd)
-            call nerdtree#initNerdTree(cwd.str())
+            call g:NERDTreeCreator.CreatePrimary(cwd.str())
         else
-            call nerdtree#initNerdTree(p.getParent().str())
+            call g:NERDTreeCreator.CreatePrimary(p.getParent().str())
         endif
     else
         if !p.isUnder(g:NERDTreeFileNode.GetRootForTab().path)
             if !nerdtree#isTreeOpen()
-                call nerdtree#createTreeWin()
+                call g:NERDTreeCreator.TogglePrimary('')
             else
                 call nerdtree#putCursorInTreeWin()
             endif
@@ -208,7 +203,7 @@ function! nerdtree#findAndRevealPath()
             call nerdtree#chRoot(g:NERDTreeDirNode.New(p.getParent()))
         else
             if !nerdtree#isTreeOpen()
-                call nerdtree#toggle("")
+                call g:NERDTreeCreator.TogglePrimary("")
             endif
         endif
     endif
@@ -225,169 +220,24 @@ function! nerdtree#has_opt(options, name)
     return has_key(a:options, a:name) && a:options[a:name] == 1
 endfunction
 
-"FUNCTION: nerdtree#initNerdTree(name) {{{2
-"Initialise the nerd tree for this tab. The tree will start in either the
-"given directory, or the directory associated with the given bookmark
-"
-"Args:
-"name: the name of a bookmark or a directory
-function! nerdtree#initNerdTree(name)
-    let path = {}
-    if g:NERDTreeBookmark.BookmarkExistsFor(a:name)
-        let path = g:NERDTreeBookmark.BookmarkFor(a:name).path
-    else
-        let dir = a:name ==# '' ? getcwd() : a:name
-
-        "hack to get an absolute path if a relative path is given
-        if dir =~# '^\.'
-            let dir = getcwd() . g:NERDTreePath.Slash() . dir
-        endif
-        let dir = g:NERDTreePath.Resolve(dir)
-
-        try
-            let path = g:NERDTreePath.New(dir)
-        catch /^NERDTree.InvalidArgumentsError/
-            call nerdtree#echo("No bookmark or directory found for: " . a:name)
-            return
-        endtry
-    endif
-    if !path.isDirectory
-        let path = path.getParent()
-    endif
-
-    "if instructed to, then change the vim CWD to the dir the NERDTree is
-    "inited in
-    if g:NERDTreeChDirMode != 0
-        call path.changeToDir()
-    endif
-
-    if nerdtree#treeExistsForTab()
-        if nerdtree#isTreeOpen()
-            call nerdtree#closeTree()
-        endif
-        unlet t:NERDTreeBufName
-    endif
-
-    let newRoot = g:NERDTreeDirNode.New(path)
-    call newRoot.open()
-
-    call nerdtree#createTreeWin()
-    let b:treeShowHelp = 0
-    let b:NERDTreeIgnoreEnabled = 1
-    let b:NERDTreeShowFiles = g:NERDTreeShowFiles
-    let b:NERDTreeShowHidden = g:NERDTreeShowHidden
-    let b:NERDTreeShowBookmarks = g:NERDTreeShowBookmarks
-    let b:NERDTreeRoot = newRoot
-    let b:NERDTreeType = "primary"
-
-    call nerdtree#renderView()
-    call b:NERDTreeRoot.putCursorHere(0, 0)
-
-    silent doautocmd User NERDTreeInit
+" FUNCTION: nerdtree#invokeKeyMap(key) {{{2
+"this is needed since I cant figure out how to invoke dict functions from a
+"key map
+function! nerdtree#invokeKeyMap(key)
+    call g:NERDTreeKeyMap.Invoke(a:key)
 endfunction
 
-"FUNCTION: nerdtree#initNerdTreeInPlace(dir) {{{2
-function! nerdtree#initNerdTreeInPlace(dir)
-    try
-        let path = g:NERDTreePath.New(a:dir)
-    catch /^NERDTree.InvalidArgumentsError/
-        call nerdtree#echo("Invalid directory name:" . a:name)
-        return
-    endtry
-
-    "we want the directory buffer to disappear when we do the :edit below
-    setlocal bufhidden=wipe
-
-    let previousBuf = expand("#")
-
-    "we need a unique name for each secondary tree buffer to ensure they are
-    "all independent
-    exec "silent edit " . nerdtree#nextBufferName()
-
-    let b:NERDTreePreviousBuf = bufnr(previousBuf)
-
-    let b:NERDTreeRoot = g:NERDTreeDirNode.New(path)
-    call b:NERDTreeRoot.open()
-
-    call nerdtree#setCommonBufOptions()
-    let b:NERDTreeType = "secondary"
-
-    call nerdtree#renderView()
-
-    silent doautocmd User NERDTreeInit
-endfunction
-
-" FUNCTION: nerdtree#initNerdTreeMirror() {{{2
-function! nerdtree#initNerdTreeMirror()
-
-    "get the names off all the nerd tree buffers
-    let treeBufNames = []
-    for i in range(1, tabpagenr("$"))
-        let nextName = nerdtree#tabpagevar(i, 'NERDTreeBufName')
-        if nextName != -1 && (!exists("t:NERDTreeBufName") || nextName != t:NERDTreeBufName)
-            call add(treeBufNames, nextName)
-        endif
-    endfor
-    let treeBufNames = nerdtree#unique(treeBufNames)
-
-    "map the option names (that the user will be prompted with) to the nerd
-    "tree buffer names
-    let options = {}
-    let i = 0
-    while i < len(treeBufNames)
-        let bufName = treeBufNames[i]
-        let treeRoot = getbufvar(bufName, "NERDTreeRoot")
-        let options[i+1 . '. ' . treeRoot.path.str() . '  (buf name: ' . bufName . ')'] = bufName
-        let i = i + 1
-    endwhile
-
-    "work out which tree to mirror, if there is more than 1 then ask the user
-    let bufferName = ''
-    if len(keys(options)) > 1
-        let choices = ["Choose a tree to mirror"]
-        let choices = extend(choices, sort(keys(options)))
-        let choice = inputlist(choices)
-        if choice < 1 || choice > len(options) || choice ==# ''
-            return
-        endif
-
-        let bufferName = options[sort(keys(options))[choice-1]]
-    elseif len(keys(options)) ==# 1
-        let bufferName = values(options)[0]
-    else
-        call nerdtree#echo("No trees to mirror")
-        return
-    endif
-
-    if nerdtree#treeExistsForTab() && nerdtree#isTreeOpen()
-        call nerdtree#closeTree()
-    endif
-
-    let t:NERDTreeBufName = bufferName
-    call nerdtree#createTreeWin()
-    exec 'buffer ' .  bufferName
-    if !&hidden
-        call nerdtree#renderView()
-    endif
-endfunction
-
-" FUNCTION: nerdtree#nextBufferName() {{{2
-" returns the buffer name for the next nerd tree
-function! nerdtree#nextBufferName()
-    let name = nerdtree#bufNamePrefix() . nerdtree#nextBufferNumber()
-    return name
-endfunction
-
-" FUNCTION: nerdtree#nextBufferNumber() {{{2
-" the number to add to the nerd tree buffer name to make the buf name unique
-function! nerdtree#nextBufferNumber()
-    if !exists("s:nextBufNum")
-        let s:nextBufNum = 1
-    else
-        let s:nextBufNum += 1
-    endif
-
-    return s:nextBufNum
+" FUNCTION: nerdtree#loadClassFiles() {{{2
+function! nerdtree#loadClassFiles()
+    runtime lib/nerdtree/path.vim
+    runtime lib/nerdtree/menu_controller.vim
+    runtime lib/nerdtree/menu_item.vim
+    runtime lib/nerdtree/key_map.vim
+    runtime lib/nerdtree/bookmark.vim
+    runtime lib/nerdtree/tree_file_node.vim
+    runtime lib/nerdtree/tree_dir_node.vim
+    runtime lib/nerdtree/opener.vim
+    runtime lib/nerdtree/creator.vim
 endfunction
 
 " FUNCTION: nerdtree#postSourceActions() {{{2
@@ -526,6 +376,11 @@ function! nerdtree#centerView()
     endif
 endfunction
 
+" FUNCTION: nerdtree#chRoot(node) {{{2
+" changes the current root to the selected one
+function! nerdtree#chRoot(node)
+    call s:chRoot(a:node)
+endfunction
 "FUNCTION: nerdtree#closeTree() {{{2
 "Closes the primary NERD tree window for this tab
 function! nerdtree#closeTree()
@@ -564,27 +419,6 @@ function! nerdtree#closeTreeIfQuitOnOpen()
     if g:NERDTreeQuitOnOpen && nerdtree#isTreeOpen()
         call nerdtree#closeTree()
     endif
-endfunction
-
-"FUNCTION: nerdtree#createTreeWin() {{{2
-"Inits the NERD tree window. ie. opens it, sizes it, sets all the local
-"options etc
-function! nerdtree#createTreeWin()
-    "create the nerd tree window
-    let splitLocation = g:NERDTreeWinPos ==# "left" ? "topleft " : "botright "
-    let splitSize = g:NERDTreeWinSize
-
-    if !exists('t:NERDTreeBufName')
-        let t:NERDTreeBufName = nerdtree#nextBufferName()
-        silent! exec splitLocation . 'vertical ' . splitSize . ' new'
-        silent! exec "edit " . t:NERDTreeBufName
-    else
-        silent! exec splitLocation . 'vertical ' . splitSize . ' split'
-        silent! exec "buffer " . t:NERDTreeBufName
-    endif
-
-    setlocal winfixwidth
-    call nerdtree#setCommonBufOptions()
 endfunction
 
 "FUNCTION: nerdtree#dumpHelp  {{{2
@@ -1086,51 +920,6 @@ function! nerdtree#saveScreenState()
     endtry
 endfunction
 
-"FUNCTION: nerdtree#setCommonBufOptions() {{{2
-function! nerdtree#setCommonBufOptions()
-    "throwaway buffer options
-    setlocal noswapfile
-    setlocal buftype=nofile
-    setlocal bufhidden=hide
-    setlocal nowrap
-    setlocal foldcolumn=0
-    setlocal foldmethod=manual
-    setlocal nofoldenable
-    setlocal nobuflisted
-    setlocal nospell
-    if g:NERDTreeShowLineNumbers
-        setlocal nu
-    else
-        setlocal nonu
-        if v:version >= 703
-            setlocal nornu
-        endif
-    endif
-
-    iabc <buffer>
-
-    if g:NERDTreeHighlightCursorline
-        setlocal cursorline
-    endif
-
-    call nerdtree#setupStatusline()
-
-    let b:treeShowHelp = 0
-    let b:NERDTreeIgnoreEnabled = 1
-    let b:NERDTreeShowFiles = g:NERDTreeShowFiles
-    let b:NERDTreeShowHidden = g:NERDTreeShowHidden
-    let b:NERDTreeShowBookmarks = g:NERDTreeShowBookmarks
-    setfiletype nerdtree
-    call nerdtree#bindMappings()
-endfunction
-
-"FUNCTION: nerdtree#setupStatusline() {{{2
-function! nerdtree#setupStatusline()
-    if g:NERDTreeStatusline != -1
-        let &l:statusline = g:NERDTreeStatusline
-    endif
-endfunction
-
 "FUNCTION: nerdtree#stripMarkupFromLine(line, removeLeadingSpaces){{{2
 "returns the given line with all the tree parts stripped off
 "
@@ -1168,29 +957,6 @@ function! nerdtree#stripMarkupFromLine(line, removeLeadingSpaces)
     return line
 endfunction
 
-"FUNCTION: nerdtree#toggle(dir) {{{2
-"Toggles the NERD tree. I.e the NERD tree is open, it is closed, if it is
-"closed it is restored or initialized (if it doesnt exist)
-"
-"Args:
-"dir: the full path for the root node (is only used if the NERD tree is being
-"initialized.
-function! nerdtree#toggle(dir)
-    if nerdtree#treeExistsForTab()
-        if !nerdtree#isTreeOpen()
-            call nerdtree#createTreeWin()
-            if !&hidden
-                call nerdtree#renderView()
-            endif
-            call nerdtree#restoreScreenState()
-        else
-            call nerdtree#closeTree()
-        endif
-    else
-        call nerdtree#initNerdTree(a:dir)
-    endif
-endfunction
-
 "SECTION: Interface bindings {{{1
 "============================================================
 
@@ -1219,26 +985,9 @@ function! s:activateBookmark(bm)
     call a:bm.activate(!a:bm.path.isDirectory ? {'where': 'p'} : {})
 endfunction
 
-"FUNCTION: nerdtree#bindMappings() {{{2
-function! nerdtree#bindMappings()
-    "make <cr> do the same as the default 'o' mapping
-    exec "nnoremap <silent> <buffer> <cr> :call <SID>KeyMap_Invoke('". g:NERDTreeMapActivateNode ."')<cr>"
-
-    call g:NERDTreeKeyMap.BindAll()
-
-    command! -buffer -nargs=? Bookmark :call <SID>bookmarkNode('<args>')
-    command! -buffer -complete=customlist,nerdtree#completeBookmarks -nargs=1 RevealBookmark :call <SID>revealBookmark('<args>')
-    command! -buffer -complete=customlist,nerdtree#completeBookmarks -nargs=1 OpenBookmark :call <SID>openBookmark('<args>')
-    command! -buffer -complete=customlist,nerdtree#completeBookmarks -nargs=* ClearBookmarks call <SID>clearBookmarks('<args>')
-    command! -buffer -complete=customlist,nerdtree#completeBookmarks -nargs=+ BookmarkToRoot call g:NERDTreeBookmark.ToRoot('<args>')
-    command! -buffer -nargs=0 ClearAllBookmarks call g:NERDTreeBookmark.ClearAll() <bar> call nerdtree#renderView()
-    command! -buffer -nargs=0 ReadBookmarks call g:NERDTreeBookmark.CacheBookmarks(0) <bar> call nerdtree#renderView()
-    command! -buffer -nargs=0 WriteBookmarks call g:NERDTreeBookmark.Write()
-endfunction
-
-" FUNCTION: s:bookmarkNode(name) {{{2
+" FUNCTION: nerdtree#bookmarkNode(name) {{{2
 " Associate the current node with the given name
-function! s:bookmarkNode(...)
+function! nerdtree#bookmarkNode(...)
     let currentNode = g:NERDTreeFileNode.GetSelected()
     if currentNode != {}
         let name = a:1
@@ -1275,7 +1024,7 @@ endfunction
 
 " FUNCTION: s:chRootCwd() {{{2
 " changes the current root to CWD
-function! s:chRootCwd()
+function! nerdtree#chRootCwd()
     try
         let cwd = g:NERDTreePath.New(getcwd())
     catch /^NERDTree.InvalidArgumentsError/
@@ -1288,8 +1037,8 @@ function! s:chRootCwd()
     call nerdtree#chRoot(g:NERDTreeDirNode.New(cwd))
 endfunction
 
-" FUNCTION: s:clearBookmarks(bookmarks) {{{2
-function! s:clearBookmarks(bookmarks)
+" FUNCTION: nerdtree#clearBookmarks(bookmarks) {{{2
+function! nerdtree#clearBookmarks(bookmarks)
     if a:bookmarks ==# ''
         let currentNode = g:NERDTreeFileNode.GetSelected()
         if currentNode != {}
@@ -1457,9 +1206,9 @@ function! s:jumpToPrevSibling(node)
     call nerdtree#jumpToSibling(a:node, 0)
 endfunction
 
-" FUNCTION: s:openBookmark(name) {{{2
+" FUNCTION: nerdtree#openBookmark(name) {{{2
 " put the cursor on the given bookmark and, if its a file, open it
-function! s:openBookmark(name)
+function! nerdtree#openBookmark(name)
     try
         let targetNode = g:NERDTreeBookmark.GetNodeForName(a:name, 0)
         call targetNode.putCursorHere(0, 1)
@@ -1525,9 +1274,9 @@ function! s:previewNodeVSplit(node)
     call a:node.open({'stay': 1, 'where': 'v', 'keepopen': 1})
 endfunction
 
-" FUNCTION: s:revealBookmark(name) {{{2
+" FUNCTION: nerdtree#revealBookmark(name) {{{2
 " put the cursor on the node associate with the given name
-function! s:revealBookmark(name)
+function! nerdtree#revealBookmark(name)
     try
         let targetNode = g:NERDTreeBookmark.GetNodeForName(a:name, 0)
         call targetNode.putCursorHere(0, 1)
