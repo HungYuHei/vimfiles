@@ -109,6 +109,9 @@ nnoremap <leader>gcm :Gcommit<CR>
 nnoremap <leader>gdf :Gdiff<CR>
 nnoremap <leader>grsh :Git reset HEAD :%<CR>
 
+" CoffeeScript
+nnoremap <leader>cf :CoffeeCompile<CR>
+
 "colorscheme blackboard  " 使用blackboard插件的配色
 colorscheme monokai
 
