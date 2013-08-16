@@ -1,6 +1,6 @@
 " 字体
-"set guifont=utf-8:h16
-set guifont=utf-8:h16
+"set guifont=Monaco:h16
+set guifont=Menlo:h16
 " 光标不闪烁
 set gcr=a:block-blinkon0
 " 隐藏左、右、底部滚动条
@@ -8,12 +8,12 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=b
 " 隐藏菜单栏
-set guioptions+=m
+set guioptions-=m
 " 隐藏工具栏
-set guioptions+=T
+set guioptions-=T
 
 set novisualbell
-set fileencodings=utf-8,gbk,latin1
+set fileencodings=utf-8
 
 " ⌘ + ⌥ + ←  or →
 noremap <D-M-Left> :tabprevious<cr>
