@@ -67,9 +67,9 @@ please let me know if you have any issues.
 * `Ctrl-[hjkl]` Move between windows (left down up right)
 * `Ctrl-p` Invoke ctrlP (reference: [ctrlP homepage](https://github.com/kien/ctrlp.vim))
 * `<leader>a` `:Ag`
-* `<leader>cf` copy the file's relative path to the clipboard
+* `<F5>` copy the file's relative path to the clipboard
 * `<leader>cp` copy the file's absoulte path to the clipboard
-* `<leader>v` Reselect the text that was just pasted
+* `<leader>V` Reselect the text that was just pasted
 * `<leader>w` Strip all trailing whitespace in the current file
 * `<leader>lc` Toggle highlight cursor column
 * `<leader>ll` Toggle highlight cursor line
@@ -85,10 +85,10 @@ please let me know if you have any issues.
 
 ## Plugins
 
-* [The NERD tree](http://www.vim.org/scripts/script.php?script_id=1658) : A tree explorer plugin for navigating the filesystem
-* [vim-surround](http://www.vim.org/scripts/script.php?script_id=1697) : Plugin for deleting, changing, and adding "surroundings"
+* [The NERD tree](https://github.com/scrooloose/nerdtree) : A tree explorer plugin for navigating the filesystem
+* [vim-surround](https://github.com/tpope/vim-surround) : Plugin for deleting, changing, and adding "surroundings"
 * [BufExplorer](http://www.vim.org/scripts/script.php?script_id=42) : Quickly and easily switch between buffers
-* [NERDCommenter](http://www.vim.org/scripts/script.php?script_id=1218) : A plugin that allows for easy commenting of code for many filetypes
+* [NERDCommenter](https://github.com/scrooloose/nerdcommenter) : A plugin that allows for easy commenting of code for many filetypes
 * [snipMate](http://www.vim.org/scripts/script.php?script_id=2540) : TextMate-style snippets for Vim
 * [TagList](http://www.vim.org/scripts/script.php?script_id=273) : Provide an overview of the structure of source code files
 * [fugitive](https://github.com/tpope/vim-fugitive) : A Git wrapper so awesome, it should be illegal
@@ -101,7 +101,7 @@ please let me know if you have any issues.
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion) : Vim motions on speed
 * [ctrlP](https://github.com/kien/ctrlp.vim) : Fuzzy file, buffer, mru, tag, etc finder
 * [ZoomWin](https://github.com/vim-scripts/ZoomWin) : Zoom in/out of windows (toggle between one window and multi-window)
-* [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) : A Vim plugin for visually displaying indent levels in code
+* [indentLine](https://github.com/Yggdroot/indentLine) : A vim plugin to display the indention levels with thin vertical lines
 * [toggle-words](http://www.vim.org/scripts/script.php?script_id=1676) : Toggle words like: 'true'=>'false', 'True'=>'False' etc
 * [vim-repeat](https://github.com/tpope/vim-repeat) : Enable repeating supported plugin maps with "."
 * [Tabular](https://github.com/godlygeek/tabular) : Vim script for text filtering and alignment
