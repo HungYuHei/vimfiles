@@ -31,7 +31,7 @@ set formatoptions+=mM   " 正确地处理中文字符的折行和拼接
 set whichwrap+=<,>,h,l  " 退格键和方向键可以换行
 "
 " 当前编辑的文件编码方式
-set fileencodings=utf-8
+set fileencoding=utf-8
 
 " vim 内部使用的字符编码方式
 set encoding=utf-8
