@@ -110,7 +110,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " copy the file relative/absoulte path to the clipboard
-nmap ,cf :let @*=expand("%")<CR>
+nmap <F5> :let @*=expand("%")<CR>
 nmap ,cp :let @*=expand("%:p")<CR>
 
 " map shortcuts for fugittive
@@ -121,8 +121,11 @@ nnoremap <leader>gcm :Gcommit<CR>
 nnoremap <leader>gdf :Gdiff<CR>
 nnoremap <leader>grsh :Git reset HEAD :%<CR>
 
-colorscheme blackboard  " 使用blackboard插件的配色
-"colorscheme monokai
+" CoffeeScript
+nnoremap <leader>cf :CoffeeCompile<CR>
+
+"colorscheme blackboard  " 使用blackboard插件的配色
+colorscheme monokai
 
 " taglist插件配置
 let Tlist_Show_One_File=1    " 不同时显示多个文件的tag，只显示当前文件的

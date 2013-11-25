@@ -46,3 +46,6 @@
 [submodule "bundle/indent-line"]
 	path = bundle/indent-line
 	url = git://github.com/Yggdroot/indentLine.git
+[submodule "bundle/splitjoin"]
+	path = bundle/splitjoin
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
