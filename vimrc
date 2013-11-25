@@ -42,7 +42,7 @@ set fileencodings =utf-8,gbk,latin1
 set langmenu=zh_CN.UTF-8
 language message zh_CN.UTF-8
 set pastetoggle=<F10>    " 切换粘贴模式
-set ruler
+set ruler "打开状态栏标尺"
 "set list
 "set listchars=tab:▸\ ,eol:¬
 
