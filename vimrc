@@ -1,3 +1,4 @@
+
 call pathogen#infect()
 
 syntax on       " 语法高亮
@@ -28,9 +29,20 @@ set mouse=a         " 在所有模式下都允许使用鼠标，还可以是n,v,
 set guioptions-=R   " 隐藏右边滚动条
 set formatoptions+=mM   " 正确地处理中文字符的折行和拼接
 set whichwrap+=<,>,h,l  " 退格键和方向键可以换行
-set fileencodings=utf-8 " 文件UTF-8编码
+"
+" 当前编辑的文件编码方式
+set fileencoding=utf-8
+
+" vim 内部使用的字符编码方式
+set encoding=utf-8
+
+" vim启动时会按照所列出的字符编码方式逐一探测,并且将 fileencoding 设置为最终探测到的字符编码方式。因此最好将 Unicode 编码方式放到这个列表的最前面，将拉丁语系编码方式 latin1 放到最后面。
+set fileencodings =utf-8,gbk,latin1
+
+set langmenu=zh_CN.UTF-8
+language message zh_CN.UTF-8
 set pastetoggle=<F10>    " 切换粘贴模式
-set ruler
+set ruler "打开状态栏标尺"
 "set list
 "set listchars=tab:▸\ ,eol:¬
 
