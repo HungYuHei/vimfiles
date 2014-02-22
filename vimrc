@@ -104,6 +104,7 @@ nmap ,cp :let @*=expand("%:p")<CR>
 " map shortcuts for fugittive
 nnoremap <leader>ga :Gwrite<CR>
 nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gb :Gbrowse<CR>
 nnoremap <leader>gco :Gread<CR>
 nnoremap <leader>gcm :Gcommit<CR>
 nnoremap <leader>gdf :Gdiff<CR>
@@ -143,3 +144,5 @@ let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:functi
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+
+" let g:mustache_abbreviations = 1
