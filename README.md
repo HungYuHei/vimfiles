@@ -42,7 +42,7 @@ sudo apt-get install ctags
 
 ```
 # run this command only if you are using server branch
-cd ~/.vim/bundle && git rm --cache css_color ctrlp delimitMate git_vim haml snipmate vim-slim ZoomWin
+cd ~/.vim/bundle && git rm --cache ctrlp delimitMate git_vim haml snipmate vim-slim ZoomWin
 
 # you are required to run this commands
 cd ~/.vim
@@ -97,7 +97,6 @@ please let me know if you have any issues.
 * [AutoComplPop](http://www.vim.org/scripts/script.php?script_id=1879) : Automatically opens popup menu for completions
 * [delimitMate](http://www.vim.org/scripts/script.php?script_id=2754) : Provides auto-balancing and some expansions for parens, quotes, etc.
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39) : Extended % matching for HTML, LaTeX, and many other languages
-* [vim-css-color](https://github.com/skammer/vim-css-color) : Highlight colors in css files
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion) : Vim motions on speed
 * [ctrlP](https://github.com/kien/ctrlp.vim) : Fuzzy file, buffer, mru, tag, etc finder
 * [ZoomWin](https://github.com/vim-scripts/ZoomWin) : Zoom in/out of windows (toggle between one window and multi-window)
