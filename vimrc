@@ -98,8 +98,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " copy the file relative/absoulte path to the clipboard
-nmap <F5> :let @*=expand("%")<CR>
-nmap ,cp :let @*=expand("%:p")<CR>
+nmap ,cp :let @*=expand("%")<CR>
+" nmap ,cp :let @*=expand("%:p")<CR>
 
 " map shortcuts for fugittive
 nnoremap <leader>ga :Gwrite<CR>
