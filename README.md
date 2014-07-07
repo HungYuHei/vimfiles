@@ -77,9 +77,7 @@ please let me know if you have any issues.
 * `<leader>mh` Hide 80-column indication
 * `<leader>be` Toggle BufExplorer
 * `<leader>c<space>` Toggle NERDCommenter
-* `<leader>z` Toggle between one window and multi-window (Powered by [ZoomWin](https://github.com/vim-scripts/ZoomWin))
 * `<leader>ig` Toggle indent guides
-* `<leader>t` Toggle words (e.g. 'true'=>'false')
 
 **Please reference to the plugin's homepage below to see more shortcuts**
 
@@ -94,14 +92,11 @@ please let me know if you have any issues.
 * [fugitive](https://github.com/tpope/vim-fugitive) : A Git wrapper so awesome, it should be illegal
 * [the_silver_searcher](https://github.com/rking/ag.vim) : Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
 * [rails](http://www.vim.org/scripts/script.php?script_id=1567) : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
-* [AutoComplPop](http://www.vim.org/scripts/script.php?script_id=1879) : Automatically opens popup menu for completions
 * [delimitMate](http://www.vim.org/scripts/script.php?script_id=2754) : Provides auto-balancing and some expansions for parens, quotes, etc.
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39) : Extended % matching for HTML, LaTeX, and many other languages
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion) : Vim motions on speed
 * [ctrlP](https://github.com/kien/ctrlp.vim) : Fuzzy file, buffer, mru, tag, etc finder
-* [ZoomWin](https://github.com/vim-scripts/ZoomWin) : Zoom in/out of windows (toggle between one window and multi-window)
 * [indentLine](https://github.com/Yggdroot/indentLine) : A vim plugin to display the indention levels with thin vertical lines
-* [toggle-words](http://www.vim.org/scripts/script.php?script_id=1676) : Toggle words like: 'true'=>'false', 'True'=>'False' etc
 * [vim-repeat](https://github.com/tpope/vim-repeat) : Enable repeating supported plugin maps with "."
 * [Tabular](https://github.com/godlygeek/tabular) : Vim script for text filtering and alignment
 * [zen-coding](https://github.com/mattn/zencoding-vim) : A web-developer’s toolkit that can greatly improve your HTML & CSS workflow

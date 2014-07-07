@@ -28,15 +28,9 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/ZoomWin"]
-	path = bundle/ZoomWin
-	url = git://github.com/vim-scripts/ZoomWin.git
 [submodule "bundle/vim-slim"]
 	path = bundle/vim-slim
 	url = git://github.com/bbommarito/vim-slim.git
-[submodule "bundle/toggle_words"]
-	path = bundle/toggle_words
-	url = git://github.com/vim-scripts/toggle_words.vim.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
