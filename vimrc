@@ -113,6 +113,11 @@ nnoremap <leader>grsh :Git reset HEAD :%<CR>
 " CoffeeScript
 nnoremap <leader>cf :CoffeeCompile<CR>
 
+" RSpec
+map <Leader>rc :call RunCurrentSpecFile()<CR>
+map <Leader>ra :call RunAllSpecs()<CR>
+let g:rspec_runner = "os_x_iterm"
+
 "colorscheme blackboard  " 使用blackboard插件的配色
 colorscheme monokai
 
