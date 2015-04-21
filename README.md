@@ -12,7 +12,7 @@ mv ~/.vim ~/.vim_backup
 ### 2. Check out from github
 
 ```
-git clone git://github.com/HungYuHei/vimfiles.git ~/.vim
+git clone https://github.com/HungYuHei/vimfiles.gitt ~/.vim
 ```
 
 ### 3. Link ~/.vimrc
