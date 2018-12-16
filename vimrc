@@ -16,6 +16,7 @@ set nobackup        " 关闭备份
 set incsearch       " 增量式搜索
 set hlsearch        " 高亮搜索
 set ignorecase      " 搜索时忽略大小写
+set smartcase       " ignore case if search pattern is all lowercase, case-sensitive otherwise
 set magic           " 额，自己:h magic吧，一行很难解释
 set showmatch       " 显示匹配的括号
 set nowb
@@ -59,6 +60,9 @@ nnoremap <silent> <F9> :TlistToggle<CR>
 " 在文件名上按gf时，在新的tab中打开
 " map gf :tabnew <cfile><cr>
 " Tab和Shift-Tab缩进
+nmap <silent> ,/ :nohlsearch<CR>
+" reload vimrc
+nmap <silent> <leader>rv :so $MYVIMRC<CR>
 nmap <tab> v>
 nmap <s-tab> v<
 vmap <tab> >gv
@@ -73,7 +77,7 @@ nnoremap <leader>s <C-w>s
 " 垂直分割窗口
 nnoremap <leader>v <C-w>v
 " Ag
-nnoremap <leader>a :Ag
+nnoremap <leader>a :Ag 
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
@@ -84,9 +88,6 @@ nnoremap <leader>mh :set colorcolumn=0<CR>
 
 " toggle between one window and multi-window (ZoomWin plugin)
 map <leader>z <C-w>o
-
-" ToggleWord plugin
-nmap <leader>t :ToggleWord<CR>
 
 " zen-coding
 map <leader>c <C-y>
