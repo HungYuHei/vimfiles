@@ -59,23 +59,20 @@ map <F8> :NERDTreeToggle<CR>
 nnoremap <silent> <F9> :TlistToggle<CR>
 " 在文件名上按gf时，在新的tab中打开
 " map gf :tabnew <cfile><cr>
-" Tab和Shift-Tab缩进
 nmap <silent> ,/ :nohlsearch<CR>
 " reload vimrc
 nmap <silent> <leader>rv :so $MYVIMRC<CR>
+
+" Tab和Shift-Tab缩进
 nmap <tab> v>
 nmap <s-tab> v<
 vmap <tab> >gv
 vmap <s-tab> <gv
 
 " strip all trailing whitespace in the current file
-nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
 nnoremap <leader>V V`]
-" 水平分割窗口
-nnoremap <leader>s <C-w>s
-" 垂直分割窗口
-nnoremap <leader>v <C-w>v
 " Ag
 nnoremap <leader>a :Ag 
 " highlight cursor column
@@ -85,6 +82,17 @@ nnoremap <leader>ll :set cursorline!<CR>
 
 nnoremap <leader>ms :set colorcolumn=80<CR>
 nnoremap <leader>mh :set colorcolumn=0<CR>
+
+" window
+nnoremap <leader>ws <C-w>s
+nnoremap <leader>s <C-w>s
+nnoremap <leader>wv <C-w>v
+nnoremap <leader>v <C-w>v
+nnoremap <leader>wn <C-w>n
+nnoremap <leader>wr <C-w>r
+nnoremap <leader>w_ <C-w>_
+nnoremap <leader>w\| <C-w>\|
+nnoremap <leader>w= <C-w>=
 
 " toggle between one window and multi-window (ZoomWin plugin)
 map <leader>z <C-w>o
