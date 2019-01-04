@@ -92,7 +92,8 @@ nnoremap <leader>wn <C-w>n
 nnoremap <leader>wr <C-w>r
 nnoremap <leader>w_ <C-w>_
 nnoremap <leader>w\| <C-w>\|
-nnoremap <leader>w= <C-w>=
+nnoremap <leader>wf <C-w>_
+nnoremap <leader>we <C-w>=
 
 " toggle between one window and multi-window (ZoomWin plugin)
 map <leader>z <C-w>o
