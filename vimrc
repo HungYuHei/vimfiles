@@ -47,8 +47,6 @@ inoremap <C-a> <HOME>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 
-" ^z快速进入shell
-nmap <C-Z> :shell<cr>
 " 把空格键映射成:
 nmap <space> :
 " 在NERDTree显示对应文件位置
@@ -62,6 +60,8 @@ nnoremap <silent> <F9> :TlistToggle<CR>
 nmap <silent> ,/ :nohlsearch<CR>
 " reload vimrc
 nmap <silent> <leader>rv :so $MYVIMRC<CR>
+
+map <leader>nw :set nowrap!<CR>
 
 " Tab和Shift-Tab缩进
 nmap <tab> v>
