@@ -74,7 +74,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
 nnoremap <leader>V V`]
 " Ag
-nnoremap <leader>a :Ag 
+nnoremap <leader>a :Ag --ruby 
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
@@ -120,9 +120,6 @@ nnoremap <leader>gcm :Gcommit<CR>
 nnoremap <leader>gdf :Gdiff<CR>
 nnoremap <leader>grsh :Git reset HEAD :%<CR>
 
-" CoffeeScript
-nnoremap <leader>cf :CoffeeCompile<CR>
-
 " RSpec
 map <Leader>rc :call RunCurrentSpecFile()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
@@ -139,7 +136,7 @@ let Tlist_Use_Right_Window=1 " 在右侧窗口中显示taglist窗口
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp
 let g:ctrlp_working_path_mode = 2
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.DS_Store  " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.min.js,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags' " hard code here, maybe only works on my Mac
 

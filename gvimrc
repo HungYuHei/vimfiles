@@ -33,6 +33,15 @@ if MAC_OS()
   map <D-8> 8gt
   map <D-9> 9gt
   map <D-0> :tablast<CR>
+
+  " resize window
+  nnoremap <silent> = :resize +8<CR>
+  nnoremap <silent> - :resize -8<CR>
+  nnoremap <silent> + :vertical resize +10<cr>
+  nnoremap <silent> _ :vertical resize -10<cr>
+  " nnoremap <silent> = :exe "resize " . (winheight(0) * 4/3)<CR>
+  " nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+
 elseif LINUX()
   set guifont=Ubuntu\ Mono\ Regular\ 14
 
