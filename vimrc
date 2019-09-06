@@ -132,13 +132,21 @@ colorscheme monokai
 let Tlist_Show_One_File=1    " 不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Exit_OnlyWindow=1  " 如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window=1 " 在右侧窗口中显示taglist窗口
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags' " hard code here, maybe only works on my Mac
 
 " ctrlp
-set runtimepath^=~/.vim/bundle/ctrlp
-let g:ctrlp_working_path_mode = 2
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_root_markers = ['.project_root']
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_switch_buffer = 'et'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.min.js,.DS_Store  " MacOSX/Linux
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags' " hard code here, maybe only works on my Mac
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " javascript taglist
 let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:function'
