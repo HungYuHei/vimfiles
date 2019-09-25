@@ -140,7 +140,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_root_markers = ['.project_root']
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_switch_buffer = 'et'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.min.js,.DS_Store  " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.log,*.zip,*.min.js,.DS_Store  " MacOSX/Linux
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
