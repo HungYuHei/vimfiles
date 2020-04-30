@@ -55,6 +55,10 @@ map <F7> :NERDTreeFind<CR>
 map <F8> :NERDTreeToggle<CR>
 " F9启动taglist插件
 nnoremap <silent> <F9> :TlistToggle<CR>
+
+" Highlight matches without moving
+nnoremap gs :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+
 " 在文件名上按gf时，在新的tab中打开
 " map gf :tabnew <cfile><cr>
 nmap <silent> ,/ :nohlsearch<CR>
