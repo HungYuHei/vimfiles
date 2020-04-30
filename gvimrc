@@ -18,7 +18,7 @@ silent function! LINUX()
 endfunction
 
 if MAC_OS()
-  set guifont=Monaco:h16
+  set guifont=Menlo:h16
   " ⌘ + ⌥ + ←  or →
   noremap <D-M-Left> :tabprevious<cr>
   noremap <D-M-Right> :tabnext<cr>
