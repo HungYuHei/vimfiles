@@ -23,7 +23,7 @@ ln -s ~/.vim/vimrc ~/.vimrc
 
 ### 4. Install dependents
 
-######Mac(homebrew) :
+###### Mac(homebrew)
 
 ```
 brew update
@@ -31,27 +31,18 @@ brew install ctags
 brew install the_silver_searcher
 ```
 
-######Ubuntu :
+###### Ubuntu
 
 ```
 sudo apt-get install ctags
 # Install the_silver_searcher, take a look at https://github.com/ggreer/the_silver_searcher
 ```
 
-### 5. Fetch submodules
+### 5. Install plugins
 
-```
-# run this command only if you are using server branch
-cd ~/.vim/bundle && git rm --cache ctrlp delimitMate git_vim haml snipmate vim-slim ZoomWin
-
-# you are required to run this commands
-cd ~/.vim
-git submodule init
-git submodule update
-```
+open vim and call `:PlugInstall`
 
 That's it, enjoy!
-please let me know if you have any issues.
 
 ## Keyboard shortcuts
 

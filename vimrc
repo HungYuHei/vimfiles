@@ -1,4 +1,24 @@
-call pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-rails'
+Plug 'tmhedberg/matchit'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'kien/ctrlp.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-repeat'
+Plug 'godlygeek/tabular'
+Plug 'mattn/emmet-vim'
+Plug 'posva/vim-vue'
+Plug 'vim-airline/vim-airline'
+" Plug 'https://github.com/HungYuHei/snipmate.vim.git'
+" snippets_support
+" Plug 'taglist' http://www.vim.org/scripts/script.php?script_id=273
+call plug#end()
 
 syntax on       " 语法高亮
 filetype plugin indent on  " 文件类型检测
