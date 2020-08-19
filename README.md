@@ -100,6 +100,7 @@ please let me know if you have any issues.
 * [Tabular](https://github.com/godlygeek/tabular) : Vim script for text filtering and alignment
 * [Emmet](https://github.com/mattn/emmet-vim) : provides support for expanding abbreviations similar to emmet.
 * [indent-line](https://github.com/Yggdroot/indentLine) : display the indention levels with thin vertical lines
+* [vim-airline](https://github.com/vim-airline/vim-airline) : lean & mean status/tabline for vim that's light as air
 
 ## Screenshot
 
