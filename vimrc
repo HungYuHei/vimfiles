@@ -119,10 +119,7 @@ nnoremap <leader>w\| <C-w>\|
 nnoremap <leader>wf <C-w>_
 nnoremap <leader>we <C-w>=
 
-" toggle between one window and multi-window (ZoomWin plugin)
-map <leader>z <C-w>o
-
-" zen-coding
+" zen-coding(emmet)
 map <leader>c <C-y>
 
 " 窗口区域切换,Ctrl+jkhl 来切换
@@ -143,11 +140,6 @@ nnoremap <leader>gco :Gread<CR>
 nnoremap <leader>gcm :Gcommit<CR>
 nnoremap <leader>gdf :Gdiff<CR>
 nnoremap <leader>grsh :Git reset HEAD :%<CR>
-
-" RSpec
-map <Leader>rc :call RunCurrentSpecFile()<CR>
-map <Leader>ra :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm"
 
 "colorscheme blackboard  " 使用blackboard插件的配色
 colorscheme monokai
