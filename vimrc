@@ -15,9 +15,9 @@ Plug 'godlygeek/tabular'
 Plug 'mattn/emmet-vim'
 Plug 'posva/vim-vue'
 Plug 'vim-airline/vim-airline'
+Plug 'majutsushi/tagbar'
 " Plug 'https://github.com/HungYuHei/snipmate.vim.git'
 " snippets_support
-" Plug 'taglist' http://www.vim.org/scripts/script.php?script_id=273
 call plug#end()
 
 syntax on       " 语法高亮
@@ -73,8 +73,8 @@ nmap <space> :
 map <F7> :NERDTreeFind<CR>
 " NERDTree插件开关
 map <F8> :NERDTreeToggle<CR>
-" F9启动taglist插件
-nnoremap <silent> <F9> :TlistToggle<CR>
+" F9启动tagbar插件
+nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " Highlight matches without moving
 nnoremap gs :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
@@ -152,12 +152,6 @@ let g:rspec_runner = "os_x_iterm"
 "colorscheme blackboard  " 使用blackboard插件的配色
 colorscheme monokai
 
-" taglist插件配置
-let Tlist_Show_One_File=1    " 不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow=1  " 如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window=1 " 在右侧窗口中显示taglist窗口
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags' " hard code here, maybe only works on my Mac
-
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = 'ra'
@@ -171,8 +165,5 @@ if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
-
-" javascript taglist
-let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:function'
 
 " let g:mustache_abbreviations = 1
