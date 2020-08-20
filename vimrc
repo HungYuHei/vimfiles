@@ -16,6 +16,7 @@ Plug 'mattn/emmet-vim'
 Plug 'posva/vim-vue'
 Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'https://github.com/HungYuHei/snipmate.vim.git'
 " snippets_support
 call plug#end()
@@ -159,3 +160,8 @@ if executable('ag')
 endif
 
 " let g:mustache_abbreviations = 1
+
+" coc.nvim
+" Use <Tab> and <S-Tab> to navigate the completion list
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
