@@ -17,8 +17,7 @@ Plug 'posva/vim-vue'
 Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'https://github.com/HungYuHei/snipmate.vim.git'
-" snippets_support
+Plug 'honza/vim-snippets'
 call plug#end()
 
 syntax on       " 语法高亮

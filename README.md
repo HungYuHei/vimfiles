@@ -40,9 +40,12 @@ sudo apt-get install ctags
 
 ### 5. Install plugins
 
-open vim and call `:PlugInstall`
+```bash
+vim -c 'PlugInstall|q|q'
+vim -c 'CocInstall coc-json coc-html coc-solargraph coc-snippets coc-tsserver'
+```
 
-That's it, enjoy!
+Then restart vim.
 
 ## Keyboard shortcuts
 
