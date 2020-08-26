@@ -98,7 +98,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
 nnoremap <leader>V V`]
 " Ag
-nnoremap <leader>a :Ag --ruby 
+nnoremap <leader>a :Ag<space>
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
