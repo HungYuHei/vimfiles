@@ -1,6 +1,7 @@
 {
   "suggest.noselect": false,
-  "snippets.priority": 100,
+
+  "snippets.priority": 95,
   "snippets.ultisnips.enable": true,
   "snippets.snipmate.enable": false
 }
