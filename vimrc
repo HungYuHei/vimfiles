@@ -1,4 +1,24 @@
-call pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-rails'
+Plug 'tmhedberg/matchit'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'kien/ctrlp.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-repeat'
+Plug 'godlygeek/tabular'
+Plug 'mattn/emmet-vim'
+Plug 'posva/vim-vue'
+Plug 'vim-airline/vim-airline'
+Plug 'majutsushi/tagbar'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'honza/vim-snippets'
+call plug#end()
 
 syntax on       " 语法高亮
 filetype plugin indent on  " 文件类型检测
@@ -53,8 +73,8 @@ nmap <space> :
 map <F7> :NERDTreeFind<CR>
 " NERDTree插件开关
 map <F8> :NERDTreeToggle<CR>
-" F9启动taglist插件
-nnoremap <silent> <F9> :TlistToggle<CR>
+" F9启动tagbar插件
+nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " Highlight matches without moving
 nnoremap gs :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
@@ -78,7 +98,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
 nnoremap <leader>V V`]
 " Ag
-nnoremap <leader>a :Ag --ruby 
+nnoremap <leader>a :Ag<space>
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
@@ -99,10 +119,7 @@ nnoremap <leader>w\| <C-w>\|
 nnoremap <leader>wf <C-w>_
 nnoremap <leader>we <C-w>=
 
-" toggle between one window and multi-window (ZoomWin plugin)
-map <leader>z <C-w>o
-
-" zen-coding
+" zen-coding(emmet)
 map <leader>c <C-y>
 
 " 窗口区域切换,Ctrl+jkhl 来切换
@@ -124,19 +141,8 @@ nnoremap <leader>gcm :Gcommit<CR>
 nnoremap <leader>gdf :Gdiff<CR>
 nnoremap <leader>grsh :Git reset HEAD :%<CR>
 
-" RSpec
-map <Leader>rc :call RunCurrentSpecFile()<CR>
-map <Leader>ra :call RunAllSpecs()<CR>
-let g:rspec_runner = "os_x_iterm"
-
 "colorscheme blackboard  " 使用blackboard插件的配色
 colorscheme monokai
-
-" taglist插件配置
-let Tlist_Show_One_File=1    " 不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow=1  " 如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window=1 " 在右侧窗口中显示taglist窗口
-let Tlist_Ctags_Cmd='/usr/local/bin/ctags' " hard code here, maybe only works on my Mac
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -152,7 +158,21 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
-" javascript taglist
-let g:tlist_javascript_settings = 'javascript;s:string;a:array;o:object;f:function'
-
 " let g:mustache_abbreviations = 1
+
+" coc.nvim
+" make <tab> used for trigger completion, completion confirm, snippet expand and jump
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+let g:coc_snippet_next = '<tab>'
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
