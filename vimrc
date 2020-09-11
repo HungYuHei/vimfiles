@@ -8,7 +8,7 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-rails'
 Plug 'tmhedberg/matchit'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
@@ -145,7 +145,6 @@ nnoremap <leader>grsh :Git reset HEAD :%<CR>
 colorscheme monokai
 
 " ctrlp
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_root_markers = ['.project_root']
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
