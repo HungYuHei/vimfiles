@@ -157,6 +157,12 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" easymotion
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+" Move to line over window
+" nmap <Leader>L <Plug>(easymotion-overwin-line)
+
 " let g:mustache_abbreviations = 1
 
 " coc.nvim
