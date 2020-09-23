@@ -19,9 +19,9 @@ endfunction
 
 if MAC_OS()
   set guifont=Menlo:h16
-  " ⌘ + ⌥ + ←  or →
-  noremap <D-M-Left> :tabprevious<cr>
-  noremap <D-M-Right> :tabnext<cr>
+  " ⌘ + ⌥ + ←/→ move tabs to the left/right
+  noremap <D-M-Left> :-tabmove<cr>
+  noremap <D-M-Right> :+tabmove<cr>
 
   map <D-1> 1gt
   map <D-2> 2gt

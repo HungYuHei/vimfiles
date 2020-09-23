@@ -98,7 +98,8 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " reselect the text that was just pasted
 nnoremap <leader>V V`]
 " Ag
-nnoremap <leader>a :Ag<space>
+nnoremap <leader>ag :Ag<space>
+nnoremap <leader>ar :Ag --ruby<space>
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
@@ -129,13 +130,13 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " copy the file relative/absoulte path to the clipboard
-nmap ,cp :let @*=expand("%")<CR>
-" nmap ,cp :let @*=expand("%:p")<CR>
+nmap <leader>cp :let @*=expand("%")<CR>
+nmap <leader>cP :let @*=expand("%:p")<CR>
 
 " map shortcuts for fugittive
 nnoremap <leader>ga :Gwrite<CR>
 nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gb :Gbrowse<CR>
+nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gco :Gread<CR>
 nnoremap <leader>gcm :Gcommit<CR>
 nnoremap <leader>gdf :Gdiff<CR>

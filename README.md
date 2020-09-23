@@ -1,4 +1,4 @@
-# HungYuHei's vimrc
+# vimrc
 
 ## Installtion
 
