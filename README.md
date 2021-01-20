@@ -74,12 +74,15 @@ Then restart vim.
 * `<leader>ig` Toggle indent guides
 
 Highlight Commands:
-  ':Highlight' list all highlights.
-  ':Highlight [n [pattern]]' set highlight.
-  ':Hsample' display all highlights in a scratch buffer.
-  ':Hclear [hlnum|pattern|*]' clear highlights.
-  ':Hsave x', ':Hrestore x' save/restore highlights (x any name).
+
+1. `:Highlight` list all highlights.
+1. `:Highlight [n [pattern]]` set highlight.
+1. `:Hsample` display all highlights in a scratch buffer.
+1. `:Hclear [hlnum|pattern|*]` clear highlights.
+1. `:Hsave x`, `:Hrestore x` save/restore highlights (x any name).
+
 Saving current highlights requires '!' in 'viminfo' option.
+
 
 **Please reference to the plugin's homepage below to see more shortcuts**
 
