@@ -105,6 +105,7 @@ nnoremap <leader>V V`]
 " Ag
 nnoremap <leader>ag :Ag<space>
 nnoremap <leader>ar :Ag --ruby<space>
+nnoremap <leader>af :Ag -F<space>
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
