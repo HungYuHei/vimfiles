@@ -52,6 +52,7 @@ set whichwrap+=<,>,h,l  " 退格键和方向键可以换行
 set fileencodings=utf-8 " 文件UTF-8编码
 set pastetoggle=<F10>    " 切换粘贴模式
 set ruler
+set nowrap
 "set list
 "set listchars=tab:▸\ ,eol:¬
 
@@ -60,6 +61,10 @@ set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
+
+set foldmethod=indent
+set foldlevel=99
+set nofoldenable
 
 " 映射 Mac 风格的光标控制
 inoremap <C-e> <END>
