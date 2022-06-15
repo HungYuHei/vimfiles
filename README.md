@@ -29,6 +29,7 @@ ln -s ~/.vim/vimrc ~/.vimrc
 brew update
 brew install ctags
 brew install the_silver_searcher
+brew install ripgrep (required by 'Leaderf rg')
 ```
 
 ###### Ubuntu
@@ -59,7 +60,6 @@ Then restart vim.
 * `<leader>s` Horizontally split window
 * `<leader>v` Vertically split window
 * `Ctrl-[hjkl]` Move between windows (left down up right)
-* `Ctrl-p` Invoke ctrlP (reference: [ctrlP homepage](https://github.com/kien/ctrlp.vim))
 * `<leader>a` `:Ag`
 * `<F5>` copy the file's relative path to the clipboard
 * `<leader>cp` copy the file's absoulte path to the clipboard
@@ -72,6 +72,7 @@ Then restart vim.
 * `<leader>be` Toggle BufExplorer
 * `<leader>c<space>` Toggle NERDCommenter
 * `<leader>ig` Toggle indent guides
+* `<leader>ff` Shortcut for LeaderF
 
 Highlight Commands:
 
@@ -99,7 +100,7 @@ Saving current highlights requires '!' in 'viminfo' option.
 * [rails](http://www.vim.org/scripts/script.php?script_id=1567) : Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39) : Extended % matching for HTML, LaTeX, and many other languages
 * [EasyMotion](https://github.com/Lokaltog/vim-easymotion) : Vim motions on speed
-* [ctrlP](https://github.com/kien/ctrlp.vim) : Fuzzy file, buffer, mru, tag, etc finder
+* [LeaderF](https://github.com/Yggdroot/LeaderF) : An efficient fuzzy finder
 * [indentLine](https://github.com/Yggdroot/indentLine) : A vim plugin to display the indention levels with thin vertical lines
 * [vim-repeat](https://github.com/tpope/vim-repeat) : Enable repeating supported plugin maps with "."
 * [Tabular](https://github.com/godlygeek/tabular) : Vim script for text filtering and alignment

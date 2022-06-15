@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 call plug#end()
 
 syntax on       " 语法高亮
@@ -177,3 +178,37 @@ let g:coc_snippet_next = '<tab>'
 imap <C-l> <Plug>(coc-snippets-expand)
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+""" LeaderF
+let g:Lf_ShortcutF = "<leader>ff"
+let g:Lf_HideHelp = 1
+let g:Lf_UseCache = 0
+let g:Lf_UseVersionControlTool = 0
+let g:Lf_IgnoreCurrentBufferName = 1
+let g:Lf_ShowDevIcons = 0
+" popup mode
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_StlSeparator = { 'left': "", 'right': "", 'font': "" }
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
+let g:Lf_PopupHeight = 0.45
+xnoremap <leader>ff :<C-U><C-R>=printf("Leaderf! file --input %s", leaderf#Rg#visual())<CR><CR>
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+"noremap <C-B> :<C-U><C-R>=printf("Leaderf! rg --current-buffer -e %s ", expand("<cword>"))<CR>
+" search current word
+noremap <leader>fs :<C-U><C-R>=printf("Leaderf! rg --heading -e %s", expand("<cword>"))<CR><CR>
+noremap <leader>fS :<C-U><C-R>=printf("Leaderf! rg --heading -e %s", expand("<cword>"))<CR>
+" search visually selected text literally
+xnoremap <leader>fs :<C-U><C-R>=printf("Leaderf! rg --heading -F -e %s", leaderf#Rg#visual())<CR><CR>
+noremap <leader>fo :<C-U>Leaderf! rg --recall<CR>
+" should use `Leaderf gtags --update` first
+let g:Lf_GtagsAutoGenerate = 0
+let g:Lf_Gtagslabel = 'native-pygments'
+"noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+"noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+"noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+"noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+"noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
