@@ -3,5 +3,7 @@
 
   "snippets.priority": 95,
   "snippets.ultisnips.enable": true,
-  "snippets.snipmate.enable": false
+  "snippets.snipmate.enable": false,
+
+  "tsserver.enable": false
 }
