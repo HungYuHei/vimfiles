@@ -8,7 +8,6 @@ Plug 'rking/ag.vim'
 Plug 'tpope/vim-rails'
 Plug 'tmhedberg/matchit'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-repeat'
 Plug 'godlygeek/tabular'
@@ -153,19 +152,6 @@ nnoremap <leader>grsh :Git reset HEAD :%<CR>
 
 "colorscheme blackboard  " 使用blackboard插件的配色
 colorscheme monokai
-
-" ctrlp
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_root_markers = ['.project_root']
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_switch_buffer = 'et'
-set wildignore+=*/tmp/*,*.so,*.swp,*.log,*.zip,*.min.js,.DS_Store  " MacOSX/Linux
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
 
 " easymotion
 " Move to line
