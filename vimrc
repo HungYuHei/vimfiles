@@ -106,6 +106,9 @@ nnoremap <leader>V V`]
 nnoremap <leader>ag :Ag<space>
 nnoremap <leader>ar :Ag --ruby<space>
 nnoremap <leader>af :Ag -F<space>
+xnoremap <leader>ag :<C-U><C-R>=printf("Ag %s ", expand("<cword>"))<CR>
+xnoremap <leader>ar :<C-U><C-R>=printf("Ag --ruby %s ", expand("<cword>"))<CR>
+
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
 " highlight cursor line
