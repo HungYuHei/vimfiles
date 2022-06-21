@@ -88,7 +88,6 @@ Saving current highlights requires '!' in 'viminfo' option.
 * [vim-surround](https://github.com/tpope/vim-surround) : Plugin for deleting, changing, and adding "surroundings"
 * [BufExplorer](http://www.vim.org/scripts/script.php?script_id=42) : Quickly and easily switch between buffers
 * [NERDCommenter](https://github.com/scrooloose/nerdcommenter) : A plugin that allows for easy commenting of code for many filetypes
-* [snipMate](http://www.vim.org/scripts/script.php?script_id=2540) : TextMate-style snippets for Vim
 * [TagList](http://www.vim.org/scripts/script.php?script_id=273) : Provide an overview of the structure of source code files
 * [fugitive](https://github.com/tpope/vim-fugitive) : A Git wrapper so awesome, it should be illegal
 * [the_silver_searcher](https://github.com/rking/ag.vim) : Vim plugin for the_silver_searcher, 'ag', a replacement for the Perl module / CLI script 'ack'
