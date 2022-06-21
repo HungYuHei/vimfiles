@@ -14,7 +14,6 @@ Plug 'godlygeek/tabular'
 Plug 'mattn/emmet-vim'
 Plug 'posva/vim-vue'
 Plug 'vim-airline/vim-airline'
-Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
@@ -78,8 +77,6 @@ nmap <space> :
 map <F7> :NERDTreeFind<CR>
 " NERDTree插件开关
 map <F8> :NERDTreeToggle<CR>
-" F9启动tagbar插件
-nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " Highlight matches without moving
 nnoremap gs :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>

@@ -27,17 +27,13 @@ ln -s ~/.vim/vimrc ~/.vimrc
 
 ```
 brew update
-brew install ctags
 brew install the_silver_searcher
 brew install ripgrep (required by 'Leaderf rg')
 ```
 
 ###### Ubuntu
 
-```
-sudo apt-get install ctags
-# Install the_silver_searcher, take a look at https://github.com/ggreer/the_silver_searcher
-```
+Install the_silver_searcher, take a look at https://github.com/ggreer/the_silver_searcher
 
 ### 5. Install plugins
 
@@ -54,7 +50,6 @@ Then restart vim.
 
 * `<F7>` Toggle NERDTreeFind
 * `<F8>` Toggle NERDTree
-* `<F9>` Toggle TagList
 * `<F10>` Toggle paste mode
 * `<leader><leader>` Trig EasyMotion (e.g. `<leader><leader>w` `<leader><leader>f` etc.)
 * `<leader>s` Horizontally split window
