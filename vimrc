@@ -141,11 +141,11 @@ nmap <leader>cP :let @*=expand("%:p")<CR>
 
 " map shortcuts for fugittive
 nnoremap <leader>ga :Gwrite<CR>
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gco :Gread<CR>
-nnoremap <leader>gcm :Gcommit<CR>
-nnoremap <leader>gdf :Gdiff<CR>
+nnoremap <leader>gcm :Git commit<CR>
+nnoremap <leader>gdf :Git diff<CR>
 nnoremap <leader>grsh :Git reset HEAD :%<CR>
 
 "colorscheme blackboard  " 使用blackboard插件的配色
