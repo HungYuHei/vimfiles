@@ -65,6 +65,10 @@ set foldmethod=indent
 set foldlevel=99
 set nofoldenable
 
+" using .vimrc for project specific settings
+set exrc
+set secure
+
 " 映射 Mac 风格的光标控制
 inoremap <C-e> <END>
 inoremap <C-a> <HOME>
