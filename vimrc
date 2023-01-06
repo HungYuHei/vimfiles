@@ -146,6 +146,7 @@ nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gco :Gread<CR>
 nnoremap <leader>gcm :Git commit<CR>
 nnoremap <leader>gdf :Git diff<CR>
+nnoremap <leader>gds :Gdiffsplit<CR>
 nnoremap <leader>grsh :Git reset HEAD :%<CR>
 
 "colorscheme blackboard  " 使用blackboard插件的配色
