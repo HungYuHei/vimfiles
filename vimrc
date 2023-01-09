@@ -51,6 +51,7 @@ set guioptions-=R   " 隐藏右边滚动条
 set formatoptions+=mM   " 正确地处理中文字符的折行和拼接
 set whichwrap+=<,>,h,l  " 退格键和方向键可以换行
 set fileencodings=utf-8 " 文件UTF-8编码
+set encoding=utf-8
 set pastetoggle=<F10>    " 切换粘贴模式
 set ruler
 set nowrap
@@ -111,6 +112,7 @@ nnoremap <leader>ar :Ag --ruby<space>
 nnoremap <leader>af :Ag -F<space>
 xnoremap <leader>ag :<C-U><C-R>=printf("Ag %s ", expand("<cword>"))<CR>
 xnoremap <leader>ar :<C-U><C-R>=printf("Ag --ruby %s ", expand("<cword>"))<CR>
+xnoremap <leader>ad :<C-U><C-R>=printf("Ag --ruby 'def %s'", expand("<cword>"))<CR>
 
 " highlight cursor column
 nnoremap <leader>lc :set cursorcolumn!<CR>
@@ -160,7 +162,7 @@ colorscheme monokai
 
 " easymotion
 " Move to line
-map <Leader>L <Plug>(easymotion-bd-jk)
+map <Leader><Leader>l <Plug>(easymotion-bd-jk)
 " Move to line over window
 " nmap <Leader>L <Plug>(easymotion-overwin-line)
 
